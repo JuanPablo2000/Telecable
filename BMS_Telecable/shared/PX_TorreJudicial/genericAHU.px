@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <FlowPane name="content" align="fill" background="#363f47">
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,20.0"/>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Picture layout="80.625,3.75,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_temperatura.png" scale="fitRatio"/>
+
+        <Label layout="103.125,8.75,100.0,20.0" font="16.0pt SansSerif" foreground="white">
+          <ValueBinding ord="slot:">
+            <ValueToString name="text" format="%name%"/>
+          </ValueBinding>
+        </Label>
+
+        <Label layout="10.0,240.0,70.0,20.0" text="Cambiar" font="bold 14.0pt SansSerif" foreground="white"/>
+
+        <Label layout="40.0,90.0,256.0,100.0" image="file:^px/QAGSL5demo/AirSystem/Ductwork/Square/duct_hor_Xlong.png"/>
+
+        <Label layout="120.0,105.0,87.0,80.0" image="file:^px/QAGSL5demo/AirSystem/Fans/Fan_Right/fan_right_0000.png"/>
+
+        <Label layout="230.0,105.0,51.0,117.0">
+          <ValueBinding ord="slot:feedbackValvula">
+            <INumericToSimple name="image" map="gx:Image 0.0:20.0=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0000.png;20.0:40.0=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0001.png;40.0:60.0=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0002.png;60.0:80.0=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0003.png;80.0:100.0=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0004.png;default=file:^px/QAGSL5demo/AirSystem/Coils/coils_cool_2way_bottom/coils_cool_2way_bottom_0000.png;"/>
+          </ValueBinding>
+        </Label>
+
+        <BoundLabel layout="225.0,220.0,80.0,20.0" foreground="white">
+          <BoundLabelBinding ord="slot:feedbackValvula" statusEffect="none">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+        </BoundLabel>
+
+        <ImageButton layout="65.0,240.0,250.0,35.0" buttonStyle="none">
+          <ActionBinding ord="slot:cambioModo/set" widgetEvent="actionPerformed"/>
+          <ValueBinding ord="slot:cambioModo">
+            <IEnumToSimple name="image" map="gx:Image 255=file:^PX_TorreJudicial/iconos/btn_cambiarhorario.png;1=file:^images/botones/btn_sobrecomando-desocupado.png;0=file:^images/botones/btn_sobrecomando-ocupado.png;default=file:^PX_TorreJudicial/iconos/btn_cambiarhorario.png;"/>
+          </ValueBinding>
+        </ImageButton>
+
+        <Label layout="145.0,115.0,50.0,53.0">
+          <ValueBinding ord="slot:comandoEncendido">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^px/QAGSL5demo/AirSystem/Fans/Fan_Right/fan_right.gif"/>
+              <Image name="falseValue" value="null"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Label>
+
+        <Label layout="10.0,255.0,70.0,20.0" text="estado" font="bold 14.0pt SansSerif" foreground="white"/>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="103.125,8.75,100.0,20.0" text="Modo AHU" font="16.0pt SansSerif" foreground="white"/>
+
+        <BoundLabel layout="25.0,35.0,255.0,235.0">
+          <BoundLabelBinding ord="slot:hertzFan">
+            <ObjectToString name="text" format=""/>
+            <INumericToSimple name="image" map="gx:Image 0.0:10.0=file:^images/iconos/state_off.png;10.0:1000.0=file:^images/iconos/state_on.png;default=file:^images/iconos/state_off.png;"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Picture layout="50.0,45.0,200.0,75.0" image="file:^PX_TorreJudicial/iconos/indicador_temperatura_setpoint.png" scale="fitRatio"/>
+
+        <Label layout="115.125,8.75,100.0,20.0" text="SetPoints" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="80.0,5.0,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_setpoint.png" scale="fitRatio"/>
+
+        <BoundLabel layout="80.0,45.0,160.0,50.0" font="22.0pt Arial" foreground="white">
+          <BoundLabelBinding ord="slot:tempSetpoint">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <Picture layout="45.0,170.0,200.0,75.0" image="file:^PX_TorreJudicial/iconos/indicador_precion_setpoint.png" scale="fitRatio"/>
+
+        <ImageButton layout="60.0,125.0,220.0,40.0" image="file:^PX_TorreJudicial/iconos/btn_setpoint-temp.png" buttonStyle="none">
+          <ActionBinding ord="slot:tempSetpoint/set" widgetEvent="actionPerformed"/>
+        </ImageButton>
+
+        <ImageButton layout="60.0,240.0,225.0,40.0" image="file:^PX_TorreJudicial/iconos/btn_setpoint-presion.png" buttonStyle="none">
+          <ActionBinding ord="slot:setpointPresion/set" widgetEvent="actionPerformed"/>
+        </ImageButton>
+
+        <BoundLabel layout="100.0,175.0,120.0,40.0" font="22.0pt Arial" foreground="white">
+          <BoundLabelBinding ord="slot:setpointPresion" statusEffect="none">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+        </BoundLabel>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="103.125,8.75,100.0,20.0" text="Sensores" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="80.0,5.0,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_humedad.png" scale="fitRatio"/>
+
+        <Picture layout="0.0,185.0,150.0,90.0" image="file:^PX_TorreJudicial/iconos/indicador_precion_salidamanejadora.png" scale="fitRatio"/>
+
+        <BoundLabel layout="30.0,200.0,105.0,40.0" font="bold 14.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:presionEstatica">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <Picture layout="150.0,180.0,150.0,100.0" image="file:^PX_TorreJudicial/iconos/indicador_frecuenciavariable.png" scale="fitRatio"/>
+
+        <BoundLabel layout="180.0,200.0,105.0,40.0" font="bold 14.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:frecuenciaMotor">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <BoundLabel layout="20.0,80.0,105.0,40.0" font="bold 14.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:tempSuministro">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <Picture layout="5.0,70.0,130.0,80.0" image="file:^PX_TorreJudicial/iconos/indicador_temperatura_suministro.png" scale="fitRatio"/>
+
+        <Picture layout="160.0,70.0,130.0,80.0" image="file:^PX_TorreJudicial/iconos/indicador_temperatura_retorno.png" scale="fitRatio"/>
+
+        <BoundLabel layout="180.0,80.0,105.0,40.0" font="bold 14.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:tempRetorno">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="110.0,20.0,110.0,20.0" text="Alarmas" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="95.0,20.0,30.0,25.0" image="file:^PX_TorreJudicial/iconos/toolestado_alarmado.png" scale="fitRatio"/>
+
+        <Label layout="10.0,205.0,140.0,30.0" text="Mantenimiento alarmas" font="12.0pt Arial" foreground="silver"/>
+
+        <ImageButton layout="165.0,200.0,130.0,40.0" image="file:^images/botones/btn_alarma-out.png" buttonStyle="none">
+          <ActionBinding degradeBehavior="disable" widgetEvent="actionPerformed"/>
+          <ValueBinding/>
+        </ImageButton>
+
+        <Label layout="20.0,95.0,110.0,30.0" text="Reset VDF:" font="20.0pt Arial" foreground="white"/>
+
+        <ImageButton enabled="false" layout="185.0,95.0,100.0,30.0" text="Reset" font="16.0pt Arial" foreground="white">
+          <ActionBinding ord="slot:FAULT$20RESET/set" degradeBehavior="disable" widgetEvent="actionPerformed"/>
+          <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+          <ValueBinding ord="slot:ALARM$20ACT">
+            <IBooleanToSimple name="background">
+              <Brush name="trueValue" value="#ff4040"/>
+              <Brush name="falseValue" value="#00c0c0"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </ImageButton>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="95.0,9.0,127.0,20.0" text="Alarmas" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="90.0,5.0,30.0,25.0" image="file:^PX_TorreJudicial/iconos/toolestado_alarmado.png" scale="fitRatio"/>
+
+        <Label layout="10.0,60.0,210.0,20.0" text="Alta temperatura suministro" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse fill="silver" geom="265.0,65.0,16.0,16.0"/>
+
+        <Line stroke="white" geom="290.0,85.0 10.0,85.0"/>
+
+        <Label layout="10.0,90.0,210.0,20.0" text="Fallo en el variador" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,115.0 10.0,115.0"/>
+
+        <Label layout="10.0,120.0,210.0,20.0" text="Pre-filtro sucio" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,145.0 10.0,145.0"/>
+
+        <Label layout="10.0,150.0,210.0,20.0" text="Filtro sucio" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse geom="265.0,95.0,16.0,16.0">
+          <ValueBinding ord="slot:ALARM$20ACT">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="red"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Line stroke="white" geom="290.0,175.0 10.0,175.0"/>
+
+        <Label layout="10.0,180.0,210.0,20.0" text="Temperatura retorno" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,205.0 10.0,205.0"/>
+
+        <Ellipse fill="silver" geom="265.0,185.0,16.0,16.0"/>
+
+        <Label layout="10.0,210.0,210.0,20.0" text="Perdida de comunicacion VDF" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,235.0 10.0,235.0"/>
+
+        <Label layout="10.0,235.0,210.0,20.0" text="Sensor de humo" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Label layout="10.0,35.0,230.0,20.0" text="Perdida de comunicaci&#xf3;n controlador" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,60.0 10.0,60.0"/>
+
+        <Ellipse geom="265.0,155.0,16.0,16.0">
+          <ValueBinding ord="slot:alarmFiltro">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="red"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,125.0,16.0,16.0">
+          <ValueBinding ord="slot:alarmPrefiltro">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="red"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,215.0,16.0,16.0">
+          <ValueBinding ord="slot:frecuenciaMotor">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="red"/>
+              <Brush name="fault" value="red"/>
+              <Brush name="down" value="red"/>
+              <Brush name="alarm" value="red"/>
+              <Brush name="stale" value="silver"/>
+              <Brush name="overridden" value="silver"/>
+              <Brush name="nullStatus" value="silver"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="silver"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,40.0,16.0,16.0">
+          <ValueBinding ord="slot:tempRetorno">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="red"/>
+              <Brush name="fault" value="red"/>
+              <Brush name="down" value="red"/>
+              <Brush name="alarm" value="red"/>
+              <Brush name="stale" value="silver"/>
+              <Brush name="overridden" value="silver"/>
+              <Brush name="nullStatus" value="silver"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="silver"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,240.0,16.0,16.0">
+          <ValueBinding ord="slot:Desconexion_AC_AHU">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="#d6d6d6"/>
+              <Brush name="fault" value="#fc7734"/>
+              <Brush name="down" value="#fac600"/>
+              <Brush name="alarm" value="#cf1624"/>
+              <Brush name="stale" value="#d9c09d"/>
+              <Brush name="overridden" value="#bfaddd"/>
+              <Brush name="nullStatus" value="#e0e0e0"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="#e0e0e0"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+</ScrollPane>
+</content>
+</px>

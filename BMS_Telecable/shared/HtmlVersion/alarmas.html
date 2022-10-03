@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sistema de Gestión de edificio inteligente</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/dataTables/tables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="assets/dataTables/Responsive-2.2.3/css/responsive.bootstrap4.css">
+    <link rel="stylesheet" href="assets/dataTables/Buttons-1.6.1/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container" style="margin-left: 0px;">
+        <div class='conta bg-dark'>
+            <div class='loader'>
+              <div class='loader--dot'></div>
+              <div class='loader--dot'></div>
+              <div class='loader--dot'></div>
+              <div class='loader--dot'></div>
+              <div class='loader--dot'></div>
+              <div class='loader--dot'></div>
+              <div class='loader--text'></div>
+            </div>
+          </div>
+        <div class="pcoded-content" style="display: none;">
+      
+            <div class="row">
+              <div class="col-xl-12 col-sm-12">
+                <div class="card bg-dark">
+                  <div class="card-header text-white" style="font-size:24px;">
+                    Alarmas actuales presentes:
+                     <!-- <select id="dates" class="custom-select" style="width: auto;">
+                        <option value="7days">Últimos 7 días</option>
+                        <option value="24hours">Últimas 24 horas</option>
+                        <option value="30days">Últimos 30 días</option>
+                        <option value="3months">Últimos 3 meses</option>
+                        <option value="all">Todas</option>
+                      </select> -->
+                  </div>
+                  <div class="card-body">
+                    <table id="tableAlarm" class="table responsive nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Equipo</th>
+                <th>Hora evento</th>
+                <th>Última actualización</th>
+                <th>Mensaje</th>
+                <th>Reconocimiento</th>
+                
+            </tr>
+        </thead>
+        
+    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+  
+   <!-- <script src="assets/js/perfect-scrollbar.js"></script>-->
+  <!--<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>-->
+  <!--<script src="assets/js/pcoded.js"></script>-->
+  <!--<script src="assets/js/plugins/bootstrap.min.js"></script>-->
+ <!--<script src="assets/js/plugins/datedropper.pro.min.js"></script> --> 
+ <script src='assets/require/require.js'></script>
+ <script src='assets/js/alarmas.js'></script>  
+  <!--<script src="assets/js/plugins/jquery-3.4.1.min.js"></script>-->
+   <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+ 
+
+    
+ 
+
+</body>
+
+</html>

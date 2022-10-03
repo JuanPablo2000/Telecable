@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="jxBrowser"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <FlowPane name="content" align="fill">
+
+    <ResponsivePane maxWidth="100.0%">
+
+      <WebWidget name="content" js="view:webEditors:UserManager">
+        <Boolean name="enabled" f="3" value="true"/>
+        <WbViewBinding ord="station:|slot:/Services/UserService"/>
+      </WebWidget>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+</ScrollPane>
+</content>
+</px>

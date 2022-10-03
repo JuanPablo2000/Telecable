@@ -1,0 +1,1665 @@
+@charset "utf-8";
+
+/* Edit by Grupo Electrotécnica / RJarquín */
+
+.vistas img {
+    width: 100%
+}
+
+.vistas img[usemap] {
+    border: none;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.tooltipimg {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 7px 5px 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipUMA {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 7px 5px 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipSensorNormal {
+    background: url('../../../images/iconos/ico_sensorincendio-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorPreAlarm {
+    background: url('../../../images/iconos/ico_sensorincendio-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorFireAlarm {
+    background: url('../../../images/iconos/ico_sensorincendio-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorFault {
+    background: url('../../../images/iconos/ico_sensorincendio-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensor::after,
+.tooltipSensor::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipSensorNormal::after,
+.tooltipSensorNormal::before {
+    display: block;
+    clear: both;
+}
+
+
+.tooltipSensorEMNormal {
+    background: url('../../../images/iconos/ico_sensorem-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorEMPreAlarm {
+    background: url('../../../images/iconos/ico_sensorem-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorEMAlarm {
+    background: url('../../../images/iconos/ico_sensorem-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorEMFault {
+    background: url('../../../images/iconos/ico_sensorem-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorEMNormal::after,
+.tooltipSensorEMNormal::before {
+    display: block;
+    clear: both;
+}
+
+
+.tooltipSensorVAANormal {
+    background: url('../../../images/iconos/ico_valvula-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorVAAPreAlarm {
+    background: url('../../../images/iconos/ico_valvula-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorVAAAlarm {
+    background: url('../../../images/iconos/ico_valvula-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorVAAFault {
+    background: url('../../../images/iconos/ico_valvula-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorVAANormal::after,
+.tooltipSensorVAANormal::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipserver {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipTemp {
+    position: absolute;
+    border-radius: 25px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 6px;
+    font-weight: bold;
+    display: block;
+    padding-left: 1px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipimg::after,
+.tooltipimg::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tooltipUMA::after,
+.tooltipUMA::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.hide {
+    opacity: 0
+}
+
+.hide:hover {
+    opacity: 1
+}
+
+.tooltipserver::after,
+.tooltipserver::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tooltipimg span {
+    line-height: 1.7;
+    padding: 0 10px;
+}
+
+.tooltipUMA span {
+    line-height: 1.7;
+    padding: 0 5px;
+}
+
+.tooltipimg span,
+.tooltipimg .alarm_zone,
+.tooltipimg .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipUMA span,
+.tooltipUMA .alarm_zone,
+.tooltipUMA .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipimg .alarm_zone,
+.tooltipimg .state_zone {
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background: #1c2229
+}
+
+.tooltipUMA .alarm_zone,
+.tooltipUMA .state_zone {
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    background: #1c2229
+}
+
+.tooltipserver .alarm_zone img,
+.tooltipserver .state_zone img {
+    width: 100%
+}
+
+.text-selected {
+    color: #9C9403 !important;
+}
+
+.tool_gen {
+    left: 35%;
+    top: 50%
+}
+
+.tool_UPS {
+    left: 42%;
+    top: 29%
+}
+
+.tool_panel_incendio {
+    left: 16%;
+    top: 16%
+}
+
+.tool_panel_bombas {
+    left: 62%;
+    top: 75%
+}
+
+.tool_corteSuprema {
+    left: 72%;
+    top: 30%
+}
+
+.tool_OIJ_sistemaEnfriamiento {
+    left: 56%;
+    top: 32%
+}
+
+.tool_OIJ {
+    left: 48%;
+    top: 50%
+}
+
+.tool_UMA01_COS {
+    left: 11%;
+    top: 50%
+}
+
+.tool_UMA02_COS {
+    left: 21%;
+    top: 50%
+}
+
+.tool_UMA03_COS {
+    left: 11%;
+    top: 60%
+}
+
+.tool_UMA04_COS {
+    left: 21%;
+    top: 60%
+}
+
+.tool_anexoA {
+    left: 43%;
+    top: 30%
+}
+
+.tool_anexoB {
+    left: 2%;
+    top: 30%
+}
+
+.tool_transformador {
+    left: 7%;
+    top: 38%
+}
+
+.tool_tanque_captacion {
+    left: 36%;
+    top: 30%
+}
+
+.tool_cortePlena_exterior {
+    left: 73%;
+    top: 71%
+}
+
+.tool_OIJ_DC {
+    left: 83%;
+    top: 37%
+}
+
+.tool_AnexoA_SBTG {
+    left: 70%;
+    top: 72%
+}
+
+.tool_cortePlena_sotano {
+    left: 17%;
+    top: 67%
+}
+
+.tool_OIJ_azotea {
+    left: 10%;
+    top: 22%
+}
+
+.tool_cortePlena_casaMaquinas {
+    left: 39%;
+    top: 43%
+}
+
+.tool_subestacion {
+    left: 55%;
+    top: 65%
+}
+
+.tool_bomba01 {
+    left: 40%;
+    top: 22%
+}
+
+.tool_bomba02 {
+    left: 45%;
+    top: 30%
+}
+
+.tool_corteSuprema_panelPresurizacion {
+    left: 42%;
+    top: 26%
+}
+
+.tool_bomba03 {
+    left: 30%;
+    top: 27%
+}
+
+.tool_piso01 {
+    left: 14%;
+    top: 62%
+}
+
+.tool_piso02 {
+    left: 23.2%;
+    top: 42%
+}
+
+.tool_piso03 {
+    left: 22.6%;
+    top: 38%
+}
+
+.tool_piso04 {
+    left: 22%;
+    top: 33%
+}
+
+.tool_piso05 {
+    left: 21.4%;
+    top: 28%
+}
+
+.tool_piso06 {
+    left: 20.8%;
+    top: 23%
+}
+
+.tool_piso07 {
+    left: 20.2%;
+    top: 18%
+}
+
+.tool_piso08 {
+    left: 19.6%;
+    top: 13%
+}
+
+.tool_piso09 {
+    left: 19%;
+    top: 8%
+}
+
+.tool_corteSuprema_DTGaleria111 {
+    left: 41%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria112 {
+    left: 41%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria113 {
+    left: 48%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria114 {
+    left: 55%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria115 {
+    left: 62%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria116 {
+    left: 62%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria117 {
+    left: 55%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria118 {
+    left: 48%;
+    top: 42%
+}
+
+.tool_corteSuprema_DH011 {
+    left: 40%;
+    top: 22%
+}
+
+.tool_corteSuprema_DH012 {
+    left: 42%;
+    top: 18%
+}
+
+.tool_corteSuprema_DH015 {
+    left: 49%;
+    top: 22%
+}
+
+.tool_corteSuprema_DH017 {
+    left: 34%;
+    top: 47%
+}
+
+.tool_corteSuprema_DH018 {
+    left: 34%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH021 {
+    left: 34.5%;
+    top: 47%
+}
+
+.tool_corteSuprema_DH022 {
+    left: 35%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH030 {
+    left: 37%;
+    top: 62%
+}
+
+.tool_corteSuprema_DH032 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH033 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH035 {
+    left: 36%;
+    top: 18%
+}
+
+.tool_corteSuprema_DH037 {
+    left: 36%;
+    top: 27%
+}
+.tool_corteSuprema_DH042 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH046 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH039 {
+    left: 36%;
+    top: 27%
+}
+.tool_corteSuprema_DH053 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH093 {
+    left: 36%;
+    top: 27%
+}
+.tool_corteSuprema_DH040 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH096 {
+    left: 30%;
+    top: 35%
+}
+.tool_corteSuprema_DH097 {
+    left: 36%;
+    top: 27%
+}
+.tool_corteSuprema_DH095 {
+    left: 43%;
+    top: 35%
+}
+.tool_corteSuprema_DH108 {
+    left: 30%;
+    top: 35%
+}
+.tool_corteSuprema_DH110 {
+    left: 36%;
+    top: 27%
+}
+.tool_corteSuprema_DH107 {
+    left: 43%;
+    top: 35%
+}
+.tool_corteSuprema_DH126 {
+    left: 42%;
+    top: 30%
+}
+
+.tool_corteSuprema_DH124 {
+    left: 45%;
+    top: 30%
+}
+.tool_corteSuprema_DH121 {
+    left: 36%;
+    top: 35%
+}
+.tool_corteSuprema_DH122 {
+    left: 34.5%;
+    top: 38%
+}
+.tool_corteSuprema_DH123 {
+    left: 34.5%;
+    top: 41%
+}
+
+
+.tool_corteSuprema_EM121 {
+    left: 60%;
+    top: 40%
+}
+.tool_corteSuprema_EM122 {
+    left: 43%;
+    top: 40%
+}
+
+.tool_corteSuprema_VAA121 {
+    left: 55%;
+    top: 32%
+}
+
+
+.tool_corteSuprema_EM11 {
+    left: 57%;
+    top: 22%
+}
+.tool_corteSuprema_EM12 {
+    left: 47%;
+    top: 33%
+}
+
+.tool_corteSuprema_VAA11 {
+    left: 57%;
+    top: 18%
+}
+.tool_corteSuprema_VAA12 {
+    left: 55%;
+    top: 23%
+}
+
+
+.tool_corteSuprema_EM017 {
+    left: 50%;
+    top: 36%
+}
+.tool_corteSuprema_EM018 {
+    left: 17%;
+    top: 59%
+}
+
+.tool_corteSuprema_VAA17 {
+    left: 53%;
+    top: 37%
+}
+
+
+/*Sensores humo corte suprema*/
+
+.iconAlarm {
+    background: url('../../../images/iconos/tool_icoalarm-p01.png') no-repeat center !important;
+}
+
+.iconAuto {
+    background: url('../../../images/iconos/alarm_auto.png') no-repeat center !important;
+}
+
+.iconStop {
+    background: url('../../../images/iconos/alarm_stop.png') no-repeat center !important;
+}
+
+.iconManual {
+    background: url('../../../images/iconos/alarm_manual.png') no-repeat center !important;
+}
+
+.iconAnexoA {
+    background: url('../images/iconos/ico_edificio-anexoA.png') no-repeat center !important;
+}
+
+.iconAnexoB {
+    background: url('assets/images/iconos/ico_presion.png');
+}
+
+.iconOIJ {
+    background: url('assets/images/iconos/ico_presion.png');
+}
+
+.iconCorteSuprema {
+    background: url('../images/iconos/ico_edificio-corte.png') no-repeat center !important;
+}
+
+.tooltipserver span {
+    line-height: 1.7
+}
+
+.tooltipserver span,
+.tooltipserver .alarm_zone,
+.tooltipserver .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipserver .alarm_zone,
+.tooltipserver .state_zone {
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background: #1c2229
+}
+
+.tooltipserver .alarm_zone {
+    margin-left: 7px
+}
+
+.tooltipserver .state_zone {
+    margin-right: 7px
+}
+
+.titulo-sitemas {
+    background: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #373e47;
+    padding: 8px;
+}
+
+.contenedor_indicadores {
+    /*Flex*/
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.contenedor_indicadores {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+}
+
+.contenedor_radar {
+    width: 250px;
+    height: 400px;
+}
+
+.indicadores {
+    /*Config Flex*/
+    flex: 1;
+    flex-basis: 50%;
+    align-self: center;
+}
+
+.indicador-titulo {
+    flex-basis: 100%
+}
+
+
+/*Config Flex*/
+
+.indicadores {
+    font-size: 11.5px;
+    margin: 0
+}
+
+.indicador-titulo {
+    font-size: 16px;
+    padding: 15px 0
+}
+
+.indicadores p {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+}
+
+.indicadores sup {
+    vertical-align: super;
+}
+
+.indicadores sub {
+    vertical-align: sub;
+    bottom: 0.5em;
+}
+
+.indicadores sup,
+.indicadores sub {
+    font-size: 12px;
+    margin-left: 5px
+}
+
+.indicadores span {
+    font-size: small;
+    padding-left: 8px;
+}
+
+[class^="indi-"],
+[class*="indi-"] {
+    display: inline-block;
+    margin-right: 5px;
+    width: 18px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.indi-electrico {
+    background: url('../images/iconos/ico-indicador-electrico.png') no-repeat center;
+}
+
+.indi-temperatura {
+    background: url('../images/iconos/ico-indicador-temperatura.png') no-repeat center;
+}
+
+.indi-presion {
+    background: url('../images/iconos/ico_presion.png') no-repeat center;
+}
+
+.indi-flujo {
+    background: url('../images/iconos/ico_flujopotable.png') no-repeat center;
+    width: 37px;
+    height: 31px
+}
+
+.indi-nivel {
+    background: url('../images/iconos/ico_sensortanqueagua.png') no-repeat center;
+    width: 37px;
+    height: 31px
+}
+
+.indi-toneladas {
+    background: url('../images/iconos/ico-indicador-trf.png') no-repeat center;
+    width: 18px;
+    height: 37px
+}
+
+.indicador-PUE {
+    background: url('../../../images/indicadores/indicador_PUE.png') no-repeat center;
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 140px;
+    opacity: 0.6;
+}
+
+.donas {
+    width: 100px !important;
+    height: 100px !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.indicador-PUE {
+    padding-top: 65px;
+    padding-left: 70px;
+    font-size: 350%;
+}
+
+.dataGauge-center {
+    position: relative;
+    top: -65px;
+}
+
+.dataGauge-semi {
+    position: relative;
+    top: -25px;
+}
+
+.bg-dangeralarm {
+    background-color: #F2BAC4 !important;
+}
+
+.conta {
+    height: 100vh;
+    width: 100vw;
+    font-family: Helvetica;
+}
+
+.alarmsConta {
+    height: 50vh;
+    font-family: Helvetica;
+}
+
+.loader {
+    height: 20px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loader--dot {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    border: 2px solid white;
+}
+
+.loader--dot:first-child {
+    background-color: #8cc759;
+    animation-delay: 0.5s;
+}
+
+.loader--dot:nth-child(2) {
+    background-color: #8cc759;
+    animation-delay: 0.4s;
+}
+
+.loader--dot:nth-child(3) {
+    background-color: #8cc759;
+    animation-delay: 0.3s;
+}
+
+.loader--dot:nth-child(4) {
+    background-color: #8cc759;
+    animation-delay: 0.2s;
+}
+
+.loader--dot:nth-child(5) {
+    background-color: #8cc759;
+    animation-delay: 0.1s;
+}
+
+.loader--dot:nth-child(6) {
+    background-color: #8cc759;
+    animation-delay: 0s;
+}
+
+.loader--text {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+    color: white;
+}
+
+.loader--text:after {
+    content: "Cargando";
+    font-weight: bold;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    15% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(230px);
+    }
+    65% {
+        transform: translateX(230px);
+    }
+    95% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loading-text {
+    0% {
+        content: "Cargando";
+    }
+    25% {
+        content: "Cargando.";
+    }
+    50% {
+        content: "Cargando..";
+    }
+    75% {
+        content: "Cargando...";
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+.tool_corteSuprema_DH021 {
+    left: 46%;
+    top: 50%
+}
+
+.tool_corteSuprema_DH022 {
+    left: 47%;
+    top: 29%
+}
+
+
+.tool_corteSuprema_panelPresurizacion {
+    left: 49%;
+    top: 27%
+}
+
+
+.tool_corteSuprema_DTGaleria111 {
+    left: 49%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria112 {
+    left: 49%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria113 {
+    left: 58%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria114 {
+    left: 66%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria115 {
+    left: 75%;
+    top: 50%
+}
+
+.tool_corteSuprema_DTGaleria116 {
+    left: 74%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria117 {
+    left: 66%;
+    top: 42%
+}
+
+.tool_corteSuprema_DTGaleria118 {
+    left: 58%;
+    top: 42%
+}
+
+.tool_corteSuprema_DH011 {
+    left: 48%;
+    top: 24%
+}
+
+.tool_corteSuprema_DH012 {
+    left: 51%;
+    top: 19%
+}
+
+.tool_corteSuprema_DH015 {
+    left: 59%;
+    top: 24%
+}
+
+
+
+.tool_corteSuprema_DH017 {
+    left: 46%;
+    top: 49%
+}
+
+.tool_corteSuprema_DH018 {
+    left: 46%;
+    top: 29%
+}
+
+
+.tool_corteSuprema_DH030 {
+    left: 49%;
+    top: 61%
+}
+
+.tool_corteSuprema_DH035 {
+    left: 47%;
+    top: 18%
+}
+
+
+.tool_corteSuprema_DH033 {
+    left: 40%;
+    top: 37%
+}
+
+.tool_corteSuprema_DH037 {
+    left: 48%;
+    top: 29%
+}
+.tool_corteSuprema_DH042 {
+    left: 58%;
+    top: 37%
+}
+
+
+.tool_corteSuprema_DH046 {
+    left: 40%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH039 {
+    left: 48%;
+    top: 29%
+}
+.tool_corteSuprema_DH053 {
+    left: 57%;
+    top: 34%
+}
+
+
+.tool_corteSuprema_DH032 {
+    left: 40%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH093 {
+    left: 48%;
+    top: 29%
+}
+.tool_corteSuprema_DH040 {
+    left: 57%;
+    top: 34%
+}
+
+
+.tool_corteSuprema_DH096 {
+    left: 40%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH097 {
+    left: 48%;
+    top: 29%
+}
+.tool_corteSuprema_DH095 {
+    left: 57%;
+    top: 34%
+}
+
+
+
+.tool_corteSuprema_DH108 {
+    left: 40%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH110 {
+    left: 48%;
+    top: 29%
+}
+.tool_corteSuprema_DH107 {
+    left: 57%;
+    top: 34%
+}
+
+
+.tool_corteSuprema_EM11 {
+    left: 57%;
+    top: 22%
+}
+.tool_corteSuprema_EM12 {
+    left: 47%;
+    top: 34%
+}
+
+.tool_corteSuprema_VAA11 {
+    left: 57%;
+    top: 17%
+}
+.tool_corteSuprema_VAA12 {
+    left: 54%;
+    top: 23%
+}
+
+
+.tool_corteSuprema_EM017 {
+    left: 50%;
+    top: 36%
+}
+.tool_corteSuprema_EM018 {
+    left: 17%;
+    top: 59%
+}
+
+.tool_corteSuprema_VAA17 {
+    left: 53%;
+    top: 37%
+}
+
+	
+}
+
+
+@media (max-width: 918px) {
+	
+    
+	.tool_corteSuprema_panelPresurizacion {
+    left: 45%;
+    top: 27%
+}
+	
+	.tool_corteSuprema_DTGaleria111 {
+        left: 49%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria112 {
+        left: 49%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria113 {
+        left: 58%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria114 {
+        left: 66%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria115 {
+        left: 74%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria116 {
+        left: 74%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria117 {
+        left: 66%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria118 {
+        left: 58%;
+        top: 42%
+    }
+    .tool_corteSuprema_DH011 {
+        left: 48%;
+        top: 22%
+    }
+    .tool_corteSuprema_DH012 {
+        left: 51%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH015 {
+        left: 59%;
+        top: 22%
+    }
+    .tool_corteSuprema_DH017 {
+        left: 46%;
+        top: 47%
+    }
+    
+    .tool_corteSuprema_DH018 {
+        left: 46%;
+        top: 27%
+    }
+	
+	
+	.tool_corteSuprema_DH021 {
+    left: 46%;
+    top: 52%
+}
+
+	.tool_corteSuprema_DH022 {
+    left: 47%;
+    top: 31%
+}
+
+
+.tool_corteSuprema_DH030 {
+    left: 48%;
+    top: 61%
+}
+
+.tool_corteSuprema_DH035 {
+    left: 47%;
+    top: 18%
+}
+
+
+
+.tool_corteSuprema_DH033 {
+    left: 39%;
+    top: 36%
+}
+
+.tool_corteSuprema_DH037 {
+    left: 48%;
+    top: 27%
+}
+.tool_corteSuprema_DH042 {
+    left: 57%;
+    top: 36%
+}
+
+
+
+.tool_corteSuprema_DH046 {
+    left: 39%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH039 {
+    left: 48%;
+    top: 27%
+}
+.tool_corteSuprema_DH053 {
+    left: 57%;
+    top: 34%
+}
+
+
+.tool_corteSuprema_DH032 {
+    left: 39%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH093 {
+    left: 48%;
+    top: 27%
+}
+.tool_corteSuprema_DH040 {
+    left: 57%;
+    top: 34%
+}
+
+
+
+
+.tool_corteSuprema_DH096 {
+    left: 39%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH097 {
+    left: 48%;
+    top: 27%
+}
+.tool_corteSuprema_DH095 {
+    left: 57%;
+    top: 34%
+}
+
+
+.tool_corteSuprema_DH108 {
+    left: 39%;
+    top: 34%
+}
+
+.tool_corteSuprema_DH110 {
+    left: 48%;
+    top: 27%
+}
+.tool_corteSuprema_DH107 {
+    left: 57%;
+    top: 34%
+}
+
+.tool_corteSuprema_EM121 {
+    left: 59%;
+    top: 39%
+}
+.tool_corteSuprema_EM122 {
+    left: 42%;
+    top: 39%
+}
+
+
+.tool_corteSuprema_VAA121 {
+    left: 55%;
+    top: 32%
+}
+
+.tool_corteSuprema_EM11 {
+    left: 56%;
+    top: 22%
+}
+.tool_corteSuprema_EM12 {
+    left: 47%;
+    top: 34%
+}
+
+.tool_corteSuprema_VAA11 {
+    left: 56%;
+    top: 16%
+}
+.tool_corteSuprema_VAA12 {
+    left: 53%;
+    top: 23%
+}
+
+.tool_corteSuprema_EM017 {
+    left: 49.333%;
+    top: 35%
+}
+.tool_corteSuprema_EM018 {
+    left: 17%;
+    top: 58%
+}
+
+.tool_corteSuprema_VAA17 {
+    left: 53%;
+    top: 36%
+}
+
+}
+
+@media (max-width: 460px) {
+    .tooltipimg {
+        border-radius: 18px;
+        font-size: 11px;
+        padding: 5px;
+    }
+    .tooltipimg span {
+        line-height: 1.8;
+        padding: 0 5px;
+    }
+    .tooltipimg .alarm_zone,
+    .tooltipimg .state_zone {
+        border-radius: 20px;
+        width: 20px;
+        height: 20px;
+    }
+    .tooltipserver {
+        border-radius: 13px;
+        font-size: 7px;
+        padding: 1px;
+    }
+    .tooltipserver span {
+        line-height: 1.8;
+        padding: 0 5px;
+    }
+    .tooltipserver .alarm_zone {
+        border-radius: 10px;
+        width: 10px;
+        height: 10px;
+    }
+    .tool_gen {
+        left: 40%;
+        top: 52%
+    }
+    .tool_panel_incendio {
+        left: 2%;
+        top: 14%
+    }
+    .tool_tanque_captacion {
+        left: 32%;
+        top: 28%
+    }
+    .tool_transformador {
+        left: 2%;
+        top: 40%
+    }
+    .tool_piso01 {
+        left: 8%;
+        top: 63%
+    }
+    .tool_piso02 {
+        left: 15.3%;
+        top: 52%
+    }
+    .tool_piso03 {
+        left: 15.2%;
+        top: 45.8%
+    }
+    .tool_piso04 {
+        left: 15.1%;
+        top: 39.6%
+    }
+    .tool_piso05 {
+        left: 15%;
+        top: 33.4%
+    }
+    .tool_piso06 {
+        left: 14.9%;
+        top: 26.9%
+    }
+    .tool_piso07 {
+        left: 14.8%;
+        top: 20.7%
+    }
+    .tool_piso08 {
+        left: 14.7%;
+        top: 14.5%
+    }
+    .tool_piso09 {
+        left: 14.6%;
+        top: 8%
+    }
+	
+	
+	.tool_corteSuprema_DH021 {
+    left: 44%;
+    top: 49%
+}
+
+	.tool_corteSuprema_DH022 {
+    left: 45%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH030 {
+    left: 46%;
+    top: 52%
+}
+
+.tool_corteSuprema_DH035 {
+    left: 45%;
+    top: 10%
+}
+
+
+.tool_corteSuprema_DH033 {
+    left: 39%;
+    top: 29%
+}
+
+.tool_corteSuprema_DH037 {
+    left: 47%;
+    top: 18%
+}
+.tool_corteSuprema_DH042 {
+    left: 55%;
+    top: 29%
+}
+
+
+.tool_corteSuprema_DH046 {
+    left: 39%;
+    top: 25%
+}
+
+.tool_corteSuprema_DH039 {
+    left: 47%;
+    top: 18%
+}
+.tool_corteSuprema_DH053 {
+    left: 55%;
+    top: 25%
+}
+
+
+.tool_corteSuprema_DH032 {
+    left: 39%;
+    top: 25%
+}
+
+.tool_corteSuprema_DH093 {
+    left: 47%;
+    top: 18%
+}
+.tool_corteSuprema_DH040 {
+    left: 55%;
+    top: 25%
+}
+
+
+
+.tool_corteSuprema_DH096 {
+    left: 39%;
+    top: 25%
+}
+
+.tool_corteSuprema_DH097 {
+    left: 47%;
+    top: 18%
+}
+.tool_corteSuprema_DH095 {
+    left: 55%;
+    top: 25%
+}
+
+
+
+.tool_corteSuprema_DH108 {
+    left: 39%;
+    top: 25%
+}
+
+.tool_corteSuprema_DH110{
+    left: 47%;
+    top: 18%
+}
+.tool_corteSuprema_DH107 {
+    left: 55%;
+    top: 25%
+}
+
+
+.tool_corteSuprema_EM121 {
+    left: 58%;
+    top: 35%
+}
+.tool_corteSuprema_EM122 {
+    left: 45%;
+    top: 35%
+}
+
+
+.tool_corteSuprema_VAA121 {
+    left: 52%;
+    top: 27%
+}
+
+.tool_corteSuprema_EM11 {
+    left: 56%;
+    top: 22%
+}
+.tool_corteSuprema_EM12 {
+    left: 47%;
+    top: 34%
+}
+
+.tool_corteSuprema_VAA11 {
+    left: 55%;
+    top: 14%
+}
+.tool_corteSuprema_VAA12 {
+    left: 53%;
+    top: 23%
+}
+
+
+.tool_corteSuprema_EM017 {
+    left: 49%;
+    top: 33%
+}
+.tool_corteSuprema_EM018 {
+    left: 15%;
+    top: 53%
+}
+
+.tool_corteSuprema_VAA17 {
+    left: 53%;
+    top: 34%
+}
+
+}

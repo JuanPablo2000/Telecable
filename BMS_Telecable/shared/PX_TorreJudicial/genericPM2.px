@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="bajauxProgressBar"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="jxBrowser"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<EdgePane>
+
+  <ScrollPane name="center" viewportBackground="#323232">
+
+    <FlowPane name="content" align="fill" hgap="20" vgap="20" background="#373e47">
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref" forceNewRow="true">
+
+        <Line name="content" stroke="#272c33" geom="0.0,0.0 1920.0,0.0"/>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref" forceNewRow="true">
+
+        <CanvasPane name="content" viewSize="290.0,320.0" background="#272c33">
+
+          <Label layout="70.0,20.0,90.0,20.0" text="Medidor" font="16.0pt Arial" foreground="white"/>
+
+          <Label layout="25.0,10.0,40.0,40.0" image="file:^PX_TorreJudicial/iconos/ico_potencia.png"/>
+
+          <BoundLabel layout="150.0,15.0,90.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding statusEffect="none">
+              <ObjectToString name="text" format="%name%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <Picture layout="0.0,40.0,290.0,260.0" image="file:^PX_TorreJudicial/iconos/pxm.png" scale="fitRatio"/>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="290.0,320.0" background="#272c33">
+
+          <Label layout="75.0,20.0,170.0,20.0" text="Mediciones el&#xe9;ctricas" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <Rect fill="#424242" geom="0.0,150.0,290.0,30.0"/>
+
+          <Rect fill="#5a5a5a" geom="0.0,120.0,290.0,30.0"/>
+
+          <Rect fill="#424242" geom="0.0,90.0,290.0,30.0"/>
+
+          <Rect fill="#5a5a5a" geom="0.0,60.0,290.0,30.0"/>
+
+          <Label layout="5.0,95.0,75.0,20.0" text="Voltaje L-N" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="5.0,155.0,125.0,20.0" text="Potencia aparente" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Rect fill="#5a5a5a" geom="0.0,220.0,290.0,30.0"/>
+
+          <Path stroke="#606060" pen="0.5" geom="M140.0,60.0 L140.0,180.0"/>
+
+          <Label layout="10.0,225.0,75.0,20.0" text="Voltaje L-L" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Path stroke="#606060" pen="0.5" geom="M190.0,60.0 L190.0,180.0"/>
+
+          <Path stroke="#606060" pen="0.5" geom="M240.0,60.0 L240.0,180.0"/>
+
+          <Label layout="5.0,125.0,125.0,20.0" text="Potencia real" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Rect fill="#5a5a5a" geom="0.0,190.0,290.0,30.0"/>
+
+          <Label layout="25.0,10.0,40.0,40.0" image="file:^PX_TorreJudicial/iconos/ico_potencia.png"/>
+
+          <Label layout="155.0,65.0,25.0,20.0" text="L1" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="205.0,65.0,25.0,20.0" text="L2" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="255.0,65.0,25.0,20.0" text="L3" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="100.0,195.0,25.0,20.0" text="L1-" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="125.0,195.0,25.0,20.0" text="L2" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="165.0,195.0,25.0,20.0" text="L2-" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="190.0,195.0,25.0,20.0" text="L3" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="230.0,195.0,25.0,20.0" text="L3-" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="255.0,195.0,25.0,20.0" text="L1" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <BoundLabel layout="142.0,90.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="194.0,90.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="245.0,90.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="142.0,120.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="194.0,120.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="245.0,120.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="142.0,153.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="193.0,153.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="245.0,153.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="100.0,215.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="165.0,215.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="230.0,215.0,40.0,30.0" font="12.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/VoltajeEntradaAB_UPSA" statusEffect="none">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="290.0,320.0" background="#272c33">
+
+          <Label layout="125.0,20.0,79.99999999999994,20.0" text="Corrientes" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="75.0,10.0,38.0,38.0" image="file:^PX_TorreJudicial/iconos/ico_potencia.png"/>
+
+          <Label layout="15.0,70.0,90.0,20.0" text="Corriente L1" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="15.0,150.0,90.0,20.0" text="Corriente L2" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="15.0,230.0,90.0,20.0" text="Corriente L3" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <WebWidget layout="10.0,100.0,227.0,40.0" js="view:bajauxProgressBar:ProgressBarGauge">
+            <Boolean name="enabled" f="3" value="true"/>
+            <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/TemperaturaSuministros_DX1"/>
+            <ProgressBarType name="gaugeType" f="3" value="Line"/>
+            <String name="overrideOrd" f="rh3" value=""/>
+            <String name="valueText" f="3" value="%out.value%"/>
+            <Double name="min" f="3" value="-1.0"/>
+            <Double name="max" f="3" value="35.0"/>
+            <Color name="fill" f="3" value="white"/>
+            <Color name="background" f="3" value="#424242"/>
+            <Color name="barColorStart" f="3" value="#ff7600"/>
+            <Color name="barColorEnd" f="3" value="#ff7600"/>
+            <Color name="trailColor" f="3" value="#5a5a5a"/>
+            <Color name="textColor" f="3" value="#3a3a3a"/>
+            <Font name="font" f="3" value="null"/>
+            <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="false"/>
+            <Double name="lineWidth" f="3" value="16.0"/>
+          </WebWidget>
+
+          <Label layout="245.0,100.0,50.0,35.0" text="120 A" font="16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding/>
+          </Label>
+
+          <WebWidget layout="10.0,180.0,227.0,40.0" js="view:bajauxProgressBar:ProgressBarGauge">
+            <Boolean name="enabled" f="3" value="true"/>
+            <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/TemperaturaSuministros_DX1"/>
+            <ProgressBarType name="gaugeType" f="3" value="Line"/>
+            <String name="overrideOrd" f="rh3" value=""/>
+            <String name="valueText" f="3" value="%out.value%"/>
+            <Double name="min" f="3" value="-1.0"/>
+            <Double name="max" f="3" value="35.0"/>
+            <Color name="fill" f="3" value="white"/>
+            <Color name="background" f="3" value="#424242"/>
+            <Color name="barColorStart" f="3" value="#ff7600"/>
+            <Color name="barColorEnd" f="3" value="#ff7600"/>
+            <Color name="trailColor" f="3" value="#5a5a5a"/>
+            <Color name="textColor" f="3" value="#3a3a3a"/>
+            <Font name="font" f="3" value="null"/>
+            <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="false"/>
+            <Double name="lineWidth" f="3" value="16.0"/>
+          </WebWidget>
+
+          <Label layout="245.0,180.0,50.0,35.0" text="120 A" font="16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding/>
+          </Label>
+
+          <WebWidget layout="10.0,260.0,227.0,40.0" js="view:bajauxProgressBar:ProgressBarGauge">
+            <Boolean name="enabled" f="3" value="true"/>
+            <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/TemperaturaSuministros_DX1"/>
+            <ProgressBarType name="gaugeType" f="3" value="Line"/>
+            <String name="overrideOrd" f="rh3" value=""/>
+            <String name="valueText" f="3" value="%out.value%"/>
+            <Double name="min" f="3" value="-1.0"/>
+            <Double name="max" f="3" value="35.0"/>
+            <Color name="fill" f="3" value="white"/>
+            <Color name="background" f="3" value="#424242"/>
+            <Color name="barColorStart" f="3" value="#ff7600"/>
+            <Color name="barColorEnd" f="3" value="#ff7600"/>
+            <Color name="trailColor" f="3" value="#5a5a5a"/>
+            <Color name="textColor" f="3" value="#3a3a3a"/>
+            <Font name="font" f="3" value="null"/>
+            <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="false"/>
+            <Double name="lineWidth" f="3" value="16.0"/>
+          </WebWidget>
+
+          <Label layout="245.0,260.0,50.0,35.0" text="120 A" font="16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding/>
+          </Label>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="440.0,330.0" background="#272c33">
+
+          <Label layout="215.0,20.0,65.0,20.0" text="Totales" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="165.0,10.0,38.0,38.0" image="file:^PX_TorreJudicial/iconos/ico_potencia.png"/>
+
+          <Label layout="0.0,80.0,218.0,90.0" image="file:^PX_TorreJudicial/iconos/indi-potencia_real.png"/>
+
+          <BoundLabel layout="54.0,90.0,105.0,60.0" font="45.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/SetpointHumedad_DX1">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="274.0,90.0,105.0,60.0" font="45.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/SetpointHumedad_DX1">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <Label layout="220.0,80.0,218.0,90.0" image="file:^PX_TorreJudicial/iconos/indi-potencia_aparente.png"/>
+
+          <Label layout="75.0,200.0,298.0,99.0" image="file:^PX_TorreJudicial/iconos/indi-energia.png"/>
+
+          <BoundLabel layout="70.0,224.0,298.0,50.0" font="45.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/DX1/SetpointHumedad_DX1">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+    </FlowPane>
+
+  </ScrollPane>
+
+</EdgePane>
+</content>
+</px>

@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/modals.css">
+
+
+<div class="bs-example">
+   <button type="button" class="btn btn-primary" data-toggle="popover" title="Modal Short Text" data-content="You gotta go through it to see there ain't nothing to it. Listen to the silence.">Hover 1</button>
+   <button type="button" class="btn btn-success" data-toggle="popover" title="Modal Medium Text" data-content="The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and that's the vortex of the heart.">Hover 2</button>
+   <button type="button" class="btn btn-info" data-toggle="popover" title="Modal long Text" data-content="You gotta go through it to see there ain't nothing to it. Listen to the silence. And when the silence is deafening, you're in the center of your own universe.">Hover 3</button>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   $('[data-toggle="popover"]').popover({
+      placement: 'top',
+      trigger: 'hover',
+      show: true
+   });
+});
+</script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sistema de Gestión de edificio inteligente</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container" style="margin-left: 0px;">
+        <div class="pcoded-content">
+            <div class="row">
+                <!-- order-card start -->
+                <div class="col-xl-12 col-md-12">
+                    <div class="card text-left bg-transparent">
+
+                        <div class="card-body">
+
+
+
+                            <div>
+                                <div class="row m-b-20">
+
+                                    <div class="col-xl-2 border-left">
+                                        <div class="titulo-sitemas">Primer Circuito Judicial 7</div>
+
+                                    </div>
+
+                                    <div class="col-xl-9 vistas">
+
+                                        <img src="assets/images/vistas/edificio_CircuitoJudicial.png" alt="" usemap="#Map" id="mapa" />
+
+
+                                        <map name="Map">
+                                            <area target="_self" onclick="link('Px_Coope/Equipos/GeneradorB.px')" alt="gen-b" title="gen-b" coords="400,200,535,191,748,188,757,104,938,104,958,137,941,227,967,282,966,298,753,299" shape="poly">
+                                            <area target="_self" onclick="link('Px_Coope/Equipos/GeneradorA.px')" alt="gen-a" title="gen-a"  coords="384,405,382,297,563,205,624,226,619,292,610,455,605,402,445,440" shape="poly">
+                                            <area target="_self" onclick="link('Px_Coope/Equipos/ATS_B.px')" alt="ats-b" title="ats-b" coords="205,283,187,163,215,154,223,158,242,276,214,287" shape="poly">
+                                            <area target="_self" onclick="link('Px_Coope/Equipos/ATS_A.px')" alt="ats-a" title="ats-a" coords="306,229,296,127,320,118,328,121,335,216" shape="poly">
+
+                                        </map>
+
+                                    </div>
+
+                                    <div class="col-xl-1 border-right">
+                                        <!--<div class="titulo-sitemas">Sistemas Mecánicos</div>-->
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--Progress Bar -->
+    <!--<script src="assets/js/plugins/gauge.min.js"></script>-->
+
+
+    <!--Map funtions-->
+
+    <script src='assets/require/require.js'></script>
+    <script src='assets/js/generadores.js'></script>
+
+    <script>
+        function link(pag) {
+
+            page = parent.parent.document.getElementById("page");
+            $(page).attr("data", pag + '|view:?fullScreen=true');
+
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

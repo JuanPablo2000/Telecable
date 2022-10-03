@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <FlowPane name="content" align="fill" background="#363f47">
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,20.0"/>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="A" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorA">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="B" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorB">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="C" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorC">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="D" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorD">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="E" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorE">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="0.0,0.0,290.0,50.0" text="Ascensor" font="36.0pt SansSerif" foreground="white"/>
+
+        <Label layout="70.0,30.0,150.0,90.0" text="F" font="bold 72.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="70.0,120.0,150.0,140.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Ascensores/BI_ascensorF">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+</ScrollPane>
+</content>
+</px>

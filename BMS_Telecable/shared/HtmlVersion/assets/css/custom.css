@@ -1,0 +1,3461 @@
+@charset "utf-8";
+
+/* Edit by Grupo Electrotécnica / RJarquín */
+
+.vistas img {
+    width: 100%
+}
+
+.vistas img[usemap] {
+    border: none;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.tooltipimg {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 7px 5px 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipUMA {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 7px 5px 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipSensorNormal {
+    background: url('../../../images/iconos/ico_sensorincendio-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorPreAlarm {
+    background: url('../../../images/iconos/ico_sensorincendio-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorFireAlarm {
+    background: url('../../../images/iconos/ico_sensorincendio-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorFault {
+    background: url('../../../images/iconos/ico_sensorincendio-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensor::after,
+.tooltipSensor::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipSensorNormal::after,
+.tooltipSensorNormal::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipSensorEMNormal {
+    background: url('../../../images/iconos/ico_sensorem-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorEMPreAlarm {
+    background: url('../../../images/iconos/ico_sensorem-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorEMAlarm {
+    background: url('../../../images/iconos/ico_sensorem-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorEMFault {
+    background: url('../../../images/iconos/ico_sensorem-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorEMNormal::after,
+.tooltipSensorEMNormal::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipSensorVAANormal {
+    background: url('../../../images/iconos/ico_valvula-normal.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorVAAPreAlarm {
+    background: url('../../../images/iconos/ico_valvula-pre_alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorVAAAlarm {
+    background: url('../../../images/iconos/ico_valvula-alertado.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.tooltipSensorVAAFault {
+    background: url('../../../images/iconos/ico_valvula-fault.png') no-repeat center;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltipSensorVAANormal::after,
+.tooltipSensorVAANormal::before {
+    display: block;
+    clear: both;
+}
+
+.tooltipserver {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipTemp {
+    position: absolute;
+    border-radius: 25px;
+    border: 1px #9fabba solid;
+    color: #9fabba;
+    font-size: 6px;
+    font-weight: bold;
+    display: block;
+    padding-left: 1px;
+    background: rgba(40, 47, 56, 0.95);
+    z-index: 200;
+}
+
+.tooltipimg::after,
+.tooltipimg::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tooltipUMA::after,
+.tooltipUMA::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.hide {
+    opacity: 0
+}
+
+.hide:hover {
+    opacity: 1
+}
+
+.tooltipserver::after,
+.tooltipserver::before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tooltipimg span {
+    line-height: 1.7;
+    padding: 0 10px;
+}
+
+.tooltipUMA span {
+    line-height: 1.7;
+    padding: 0 5px;
+}
+
+.tooltipimg span,
+.tooltipimg .alarm_zone,
+.tooltipimg .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipUMA span,
+.tooltipUMA .alarm_zone,
+.tooltipUMA .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipimg .alarm_zone,
+.tooltipimg .state_zone {
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background: #1c2229
+}
+
+.tooltipUMA .alarm_zone,
+.tooltipUMA .state_zone {
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    background: #1c2229
+}
+
+.tooltipserver .alarm_zone img,
+.tooltipserver .state_zone img {
+    width: 100%
+}
+
+.text-selected {
+    color: #9C9403 !important;
+}
+
+.tool_gen {
+    left: 35%;
+    top: 50%
+}
+
+.tool_UPS {
+    left: 42%;
+    top: 29%
+}
+
+.tool_panel_incendio {
+    left: 16%;
+    top: 16%
+}
+
+.tool_panel_bombas {
+    left: 62%;
+    top: 75%
+}
+
+.tool_corteSuprema {
+    left: 78%;
+    top: 40%
+}
+
+.tool_OIJ_sistemaEnfriamiento {
+    left: 56%;
+    top: 32%
+}
+
+.tool_OIJ {
+    left: 60%;
+    top: 55%;
+}
+
+.tool_UMA01_COS {
+    left: 11%;
+    top: 50%
+}
+
+.tool_UMA02_COS {
+    left: 21%;
+    top: 50%
+}
+
+.tool_UMA03_COS {
+    left: 11%;
+    top: 60%
+}
+
+.tool_UMA04_COS {
+    left: 21%;
+    top: 60%
+}
+
+.tool_anexoA {
+    left: 60%;
+    top: 15%;
+}
+
+.tool_anexoB {
+    left: 28%;
+    top: 16%;
+}
+.tool_torrejudi {
+    top: -6%;
+    left: 72%;
+}
+.tool_DP {
+    top: -10%;
+    left: 9%;
+}
+.tool_transformador {
+    left: 7%;
+    top: 38%
+}
+
+.tool_tanque_captacion {
+    left: 36%;
+    top: 30%
+}
+
+.tool_cortePlena_exterior {
+    left: 73%;
+    top: 71%
+}
+
+.tool_OIJ_DC {
+    left: 83%;
+    top: 37%
+}
+
+.tool_AnexoA_SBTG {
+    left: 60%;
+    top: 24%
+}
+
+.tool_AnexoB_SBPC {
+    left: 85%;
+    top: 37%
+}
+
+.tool_cortePlena_sotano {
+    left: 17%;
+    top: 67%
+}
+
+.tool_OIJ_azotea {
+    left: 10%;
+    top: 22%
+}
+.tool_OIJ_Exterior{
+    left: 15%;
+    top: 65%
+}
+
+.tool_cortePlena_casaMaquinas {
+    left: 39%;
+    top: 43%
+}
+
+.tool_subestacion {
+    left: 55%;
+    top: 65%
+}
+
+.tool_subestacion_OIJ {
+    left: 35%;
+    top: 70%
+}
+.tool_bomba01 {
+    left: 40%;
+    top: 22%
+}
+
+.tool_bomba02 {
+    left: 45%;
+    top: 30%
+}
+
+.tool_corteSuprema_panelPresurizacion {
+    left: 42%;
+    top: 26%
+}
+
+.tool_bomba03 {
+    left: 30%;
+    top: 27%
+}
+
+.tool_piso01 {
+    left: 14%;
+    top: 62%
+}
+
+.tool_piso02 {
+    left: 23.2%;
+    top: 42%
+}
+
+.tool_piso03 {
+    left: 22.6%;
+    top: 38%
+}
+
+.tool_piso04 {
+    left: 22%;
+    top: 33%
+}
+
+.tool_piso05 {
+    left: 21.4%;
+    top: 28%
+}
+
+.tool_piso06 {
+    left: 20.8%;
+    top: 23%
+}
+
+.tool_piso07 {
+    left: 20.2%;
+    top: 18%
+}
+
+.tool_piso08 {
+    left: 19.6%;
+    top: 13%
+}
+
+.tool_piso09 {
+    left: 19%;
+    top: 8%
+}
+
+.tool_corteSuprema_DTGaleria111 {
+    left: 38%;
+    top: 43%
+}
+
+.tool_corteSuprema_DTGaleria112 {
+    left: 38%;
+    top: 51%
+}
+
+.tool_corteSuprema_DTGaleria113 {
+    left: 44%;
+    top: 51%
+}
+
+.tool_corteSuprema_DTGaleria114 {
+    left: 51%;
+    top: 51%
+}
+
+.tool_corteSuprema_DTGaleria115 {
+    left: 57%;
+    top: 51%
+}
+
+.tool_corteSuprema_DTGaleria116 {
+    left: 57%;
+    top: 43%
+}
+
+.tool_corteSuprema_DTGaleria117 {
+    left: 51%;
+    top: 43%
+}
+
+.tool_corteSuprema_DTGaleria118 {
+    left: 44%;
+    top: 43%
+}
+
+.tool_corteSuprema_DH101 {
+    left: 55%;
+    top: 18%
+}
+.tool_corteSuprema_DH102 {
+    left: 61%;
+    top: 15%
+}
+.tool_corteSuprema_DH103 {
+    left: 61%;
+    top: 11%
+}
+.tool_corteSuprema_DH104 {
+    left: 56%;
+    top: 11%
+}
+.tool_corteSuprema_DH011 {
+    left: 37%;
+    top: 24%
+}
+
+.tool_corteSuprema_DH012 {
+    left: 39%;
+    top: 18%
+}
+
+.tool_corteSuprema_DH015 {
+    left: 48%;
+    top: 24%
+}
+
+.tool_corteSuprema_DH017 {
+    left: 34%;
+    top: 47%
+}
+
+.tool_corteSuprema_DH018 {
+    left: 34%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH021 {
+    left: 34.5%;
+    top: 47%
+}
+
+.tool_corteSuprema_DH022 {
+    left: 35%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH030 {
+    left: 37%;
+    top: 62%
+}
+
+.tool_corteSuprema_DH032 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH033 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH035 {
+    left: 36%;
+    top: 18%
+}
+
+.tool_corteSuprema_DH037 {
+    left: 36%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH042 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH046 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH039 {
+    left: 36%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH053 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH093 {
+    left: 36%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH040 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH096 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH097 {
+    left: 36%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH095 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH108 {
+    left: 30%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH110 {
+    left: 36%;
+    top: 27%
+}
+
+.tool_corteSuprema_DH107 {
+    left: 43%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH126 {
+    left: 42%;
+    top: 30%
+}
+
+.tool_corteSuprema_DH124 {
+    left: 45%;
+    top: 30%
+}
+
+.tool_corteSuprema_DH121 {
+    left: 36%;
+    top: 35%
+}
+
+.tool_corteSuprema_DH122 {
+    left: 34.5%;
+    top: 38%
+}
+
+.tool_corteSuprema_DH123 {
+    left: 34.5%;
+    top: 41%
+}
+
+.tool_corteSuprema_EM121 {
+    left: 46%;
+    top: 40%
+}
+
+.tool_corteSuprema_DH089 {
+    left: 29%;
+    top: 55%
+}
+
+.tool_corteSuprema_DH090 {
+    left: 30%;
+    top: 63%
+}
+
+.tool_corteSuprema_DH057 {
+    left: 21%;
+    top: 56%
+}
+
+.tool_corteSuprema_DH054 {
+    left: 13%;
+    top: 62%
+}
+
+.tool_corteSuprema_DH056 {
+    left: 7%;
+    top: 60%
+}
+
+.tool_corteSuprema_DH052 {
+    left: 4.5%;
+    top: 55%
+}
+
+.tool_corteSuprema_DH050 {
+    left: 6%;
+    top: 45%
+}
+
+.tool_corteSuprema_DH049 {
+    left: 6%;
+    top: 38%
+}
+
+.tool_corteSuprema_DH044 {
+    left: 9%;
+    top: 28%
+}
+
+.tool_corteSuprema_DH038 {
+    left: 10%;
+    top: 21%
+}
+
+.tool_corteSuprema_DH028 {
+    left: 18%;
+    top: 21%
+}
+
+.tool_corteSuprema_DH027 {
+    left: 23%;
+    top: 21%
+}
+
+.tool_corteSuprema_DH025 {
+    left: 29%;
+    top: 19%
+}
+
+.tool_corteSuprema_DH026 {
+    left: 28%;
+    top: 23%
+}
+
+.tool_corteSuprema_DH087 {
+    left: 28%;
+    top: 42%
+}
+
+.tool_corteSuprema_DH086 {
+    left: 20%;
+    top: 42%
+}
+
+.tool_corteSuprema_DH048 {
+    left: 12%;
+    top: 42%
+}
+
+.tool_corteSuprema_DH047 {
+    left: 14%;
+    top: 26%
+}
+
+.tool_corteSuprema_DH092 {
+    left: 33.5%;
+    top: 37.5%
+}
+
+.tool_corteSuprema_EM122 {
+    left: 33%;
+    top: 43%
+}
+
+.tool_corteSuprema_VAA121 {
+    left: 42%;
+    top: 35%
+}
+
+.tool_corteSuprema_EM011 {
+    left: 44%;
+    top: 21%
+}
+
+.tool_corteSuprema_EM012 {
+    left: 36%;
+    top: 33%
+}
+
+.tool_defensaPublica_sotano {
+    left: 32%;
+    top: 95%
+}
+
+
+.tool_AnexoA_azotea {
+    left: 12%;
+    top: 25%
+}
+.tool_defensaPublica_SBTG_sotano {
+    left: 33%;
+    top: 65%
+}
+
+.tool_defensaPublica_SBTG_azotea {
+    left: 33%;
+    top: 65%
+}
+
+.tool_defensaPublica_azotea {
+    left: 35%;
+    top: 5%
+}
+
+
+.tool_corteSuprema_VAA011 {
+    left: 42%;
+    top: 24%
+}
+
+.tool_corteSuprema_EM017 {
+    left: 38%;
+    top: 36%
+}
+
+.tool_corteSuprema_EM018 {
+    left: 13%;
+    top: 58%
+}
+
+.tool_corteSuprema_VAA017 {
+    left: 42%;
+    top: 37%
+}
+
+.tool_corteSuprema_EM021 {
+    left: 35%;
+    top: 22%
+}
+
+.tool_corteSuprema_EM022 {
+    left: 37%;
+    top: 55%
+}
+
+.tool_corteSuprema_VAA021 {
+    left: 40%;
+    top: 35%
+}
+
+.tool_corteSuprema_EM030 {
+    left: 34%;
+    top: 22%
+}
+
+.tool_corteSuprema_EM035 {
+    left: 37%;
+    top: 68%
+}
+
+.tool_corteSuprema_VAA030 {
+    left: 39%;
+    top: 35%
+}
+
+.tool_corteSuprema_EM033 {
+    left: 36%;
+    top: 36%
+}
+
+.tool_corteSuprema_EM037 {
+    left: 35%;
+    top: 43%
+}
+
+.tool_corteSuprema_VAA033 {
+    left: 38%;
+    top: 33%
+}
+
+.tool_corteSuprema_EM046 {
+    left: 36%;
+    top: 36%
+}
+
+.tool_corteSuprema_EM039 {
+    left: 35%;
+    top: 43%
+}
+
+.tool_corteSuprema_VAA046 {
+    left: 38%;
+    top: 33%
+}
+
+.tool_corteSuprema_EM032 {
+    left: 36%;
+    top: 36%
+}
+
+.tool_corteSuprema_EM093 {
+    left: 35%;
+    top: 43%
+}
+
+.tool_corteSuprema_VAA032 {
+    left: 38%;
+    top: 33%
+}
+
+.tool_corteSuprema_EM096 {
+    left: 35%;
+    top: 43%
+}
+
+.tool_corteSuprema_VAA096 {
+    left: 38%;
+    top: 33%
+}
+
+.tool_corteSuprema_VAA108 {
+    left: 41%;
+    top: 51%
+}
+
+.tool_corteSuprema_EM106 {
+    left: 40%;
+    top: 41%
+}
+
+.tool_corteSuprema_EM105 {
+    left: 35%;
+    top: 34%
+}
+
+
+/*Sensores humo corte suprema*/
+
+.iconAlarm {
+    background: url('../../../images/iconos/tool_icoalarm-p01.png') no-repeat center !important;
+}
+
+.iconAuto {
+    background: url('../../../images/iconos/alarm_auto.png') no-repeat center !important;
+}
+
+.iconStop {
+    background: url('../../../images/iconos/alarm_stop.png') no-repeat center !important;
+}
+
+.iconManual {
+    background: url('../../../images/iconos/alarm_manual.png') no-repeat center !important;
+}
+
+.iconAnexoA {
+    background: url('../images/iconos/ico_edificio-anexoA.png') no-repeat center !important;
+}
+
+.iconAnexoB {
+    background: url('assets/images/iconos/ico_presion.png');
+}
+
+.iconOIJ {
+    background: url('assets/images/iconos/ico_presion.png');
+}
+
+.iconCorteSuprema {
+    background: url('../images/iconos/ico_edificio-corte.png') no-repeat center !important;
+}
+
+.tooltipserver span {
+    line-height: 1.7
+}
+
+.tooltipserver span,
+.tooltipserver .alarm_zone,
+.tooltipserver .state_zone {
+    float: left;
+    display: block
+}
+
+.tooltipserver .alarm_zone,
+.tooltipserver .state_zone {
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background: #1c2229
+}
+
+.tooltipserver .alarm_zone {
+    margin-left: 7px
+}
+
+.tooltipserver .state_zone {
+    margin-right: 7px
+}
+
+.titulo-sitemas {
+    background: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #373e47;
+    padding: 8px;
+}
+
+.contenedor_indicadores {
+    /*Flex*/
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.contenedor_indicadores {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+}
+
+.contenedor_radar {
+    width: 250px;
+    height: 400px;
+}
+
+.indicadores {
+    /*Config Flex*/
+    flex: 1;
+    flex-basis: 50%;
+    align-self: center;
+}
+
+.indicador-titulo {
+    flex-basis: 100%
+}
+
+
+/*Config Flex*/
+
+.indicadores {
+    font-size: 11.5px;
+    margin: 0
+}
+
+.indicador-titulo {
+    font-size: 16px;
+    padding: 15px 0
+}
+
+.indicadores p {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+}
+
+.indicadores sup {
+    vertical-align: super;
+}
+
+.indicadores sub {
+    vertical-align: sub;
+    bottom: 0.5em;
+}
+
+.indicadores sup,
+.indicadores sub {
+    font-size: 12px;
+    margin-left: 5px
+}
+
+.indicadores span {
+    font-size: small;
+    padding-left: 8px;
+}
+
+[class^="indi-"],
+[class*="indi-"] {
+    display: inline-block;
+    margin-right: 5px;
+    width: 18px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.indi-electrico {
+    background: url('../images/iconos/ico-indicador-electrico.png') no-repeat center;
+}
+
+.indi-temperatura {
+    background: url('../images/iconos/ico-indicador-temperatura.png') no-repeat center;
+}
+
+.indi-presion {
+    background: url('../images/iconos/ico_presion.png') no-repeat center;
+}
+
+.indi-flujo {
+    background: url('../images/iconos/ico_flujopotable.png') no-repeat center;
+    width: 37px;
+    height: 31px
+}
+
+.indi-nivel {
+    background: url('../images/iconos/ico_sensortanqueagua.png') no-repeat center;
+    width: 37px;
+    height: 31px
+}
+
+.indi-toneladas {
+    background: url('../images/iconos/ico-indicador-trf.png') no-repeat center;
+    width: 18px;
+    height: 37px
+}
+
+.indicador-PUE {
+    background: url('../../../images/indicadores/indicador_PUE.png') no-repeat center;
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 140px;
+    opacity: 0.6;
+}
+
+.donas {
+    width: 100px !important;
+    height: 100px !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.indicador-PUE {
+    padding-top: 65px;
+    padding-left: 70px;
+    font-size: 350%;
+}
+
+.dataGauge-center {
+    position: relative;
+    top: -65px;
+}
+
+.dataGauge-semi {
+    position: relative;
+    top: -25px;
+}
+
+.bg-dangeralarm {
+    background-color: #F2BAC4 !important;
+}
+
+.conta {
+    height: 100vh;
+    width: 100vw;
+    font-family: Helvetica;
+}
+
+.alarmsConta {
+    height: 50vh;
+    font-family: Helvetica;
+}
+
+.loader {
+    height: 20px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loader--dot {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    border: 2px solid white;
+}
+
+.loader--dot:first-child {
+    background-color: #8cc759;
+    animation-delay: 0.5s;
+}
+
+.loader--dot:nth-child(2) {
+    background-color: #8cc759;
+    animation-delay: 0.4s;
+}
+
+.loader--dot:nth-child(3) {
+    background-color: #8cc759;
+    animation-delay: 0.3s;
+}
+
+.loader--dot:nth-child(4) {
+    background-color: #8cc759;
+    animation-delay: 0.2s;
+}
+
+.loader--dot:nth-child(5) {
+    background-color: #8cc759;
+    animation-delay: 0.1s;
+}
+
+.loader--dot:nth-child(6) {
+    background-color: #8cc759;
+    animation-delay: 0s;
+}
+
+.loader--text {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+    color: white;
+}
+
+.loader--text:after {
+    content: "Cargando";
+    font-weight: bold;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    15% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(230px);
+    }
+    65% {
+        transform: translateX(230px);
+    }
+    95% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loading-text {
+    0% {
+        content: "Cargando";
+    }
+    25% {
+        content: "Cargando.";
+    }
+    50% {
+        content: "Cargando..";
+    }
+    75% {
+        content: "Cargando...";
+    }
+}
+
+@media (max-width: 1280px) {
+    .tool_corteSuprema_DH021 {
+        left: 46%;
+        top: 50%
+    }
+    .tool_corteSuprema_DH022 {
+        left: 47%;
+        top: 29%
+    }
+    .tool_corteSuprema_panelPresurizacion {
+        left: 49%;
+        top: 27%
+    }
+    .tool_corteSuprema_DTGaleria111 {
+        left: 49%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria112 {
+        left: 49%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria113 {
+        left: 58%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria114 {
+        left: 66%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria115 {
+        left: 75%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria116 {
+        left: 74%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria117 {
+        left: 66%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria118 {
+        left: 58%;
+        top: 42%
+    }
+    .tool_corteSuprema_DH011 {
+        left: 48%;
+        top: 24%
+    }
+    .tool_corteSuprema_DH012 {
+        left: 51%;
+        top: 19%
+    }
+    .tool_corteSuprema_DH015 {
+        left: 59%;
+        top: 24%
+    }
+    .tool_corteSuprema_DH017 {
+        left: 46%;
+        top: 49%
+    }
+    .tool_corteSuprema_DH018 {
+        left: 46%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH030 {
+        left: 49%;
+        top: 61%
+    }
+    .tool_corteSuprema_DH035 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH033 {
+        left: 40%;
+        top: 37%
+    }
+    .tool_corteSuprema_DH037 {
+        left: 48%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH042 {
+        left: 58%;
+        top: 37%
+    }
+    .tool_corteSuprema_DH046 {
+        left: 40%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH039 {
+        left: 48%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH053 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH032 {
+        left: 40%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH093 {
+        left: 48%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH040 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH096 {
+        left: 40%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH097 {
+        left: 48%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH095 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH108 {
+        left: 40%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH110 {
+        left: 48%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH107 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM011 {
+        left: 57%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM012 {
+        left: 47%;
+        top: 34%
+    }
+    .tool_corteSuprema_VAA011 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_EM017 {
+        left: 50%;
+        top: 36%
+    }
+    .tool_corteSuprema_EM018 {
+        left: 17%;
+        top: 59%
+    }
+    .tool_corteSuprema_VAA017 {
+        left: 53%;
+        top: 37%
+    }
+    .tool_corteSuprema_EM021 {
+        left: 46%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM022 {
+        left: 48%;
+        top: 55%
+    }
+    .tool_corteSuprema_VAA021 {
+        left: 52%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM030 {
+        left: 45%;
+        top: 23%
+    }
+    .tool_corteSuprema_EM035 {
+        left: 49%;
+        top: 68%
+    }
+    .tool_corteSuprema_VAA030 {
+        left: 52%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM033 {
+        left: 47%;
+        top: 36%
+    }
+    .tool_corteSuprema_EM037 {
+        left: 46%;
+        top: 43%
+    }
+    .tool_corteSuprema_VAA033 {
+        left: 50%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM046 {
+        left: 47%;
+        top: 36%
+    }
+    .tool_corteSuprema_EM039 {
+        left: 46%;
+        top: 43%
+    }
+    .tool_corteSuprema_VAA046 {
+        left: 50%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM032 {
+        left: 47%;
+        top: 36%
+    }
+    .tool_corteSuprema_EM093 {
+        left: 46%;
+        top: 43%
+    }
+    .tool_corteSuprema_VAA032 {
+        left: 50%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM096 {
+        left: 46%;
+        top: 43%
+    }
+    .tool_corteSuprema_VAA096 {
+        left: 50%;
+        top: 34%
+    }
+}
+
+@media (max-width: 918px) {
+    .tool_corteSuprema_panelPresurizacion {
+        left: 45%;
+        top: 27%
+    }
+    .tool_corteSuprema_DTGaleria111 {
+        left: 49%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria112 {
+        left: 49%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria113 {
+        left: 58%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria114 {
+        left: 66%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria115 {
+        left: 74%;
+        top: 50%
+    }
+    .tool_corteSuprema_DTGaleria116 {
+        left: 74%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria117 {
+        left: 66%;
+        top: 42%
+    }
+    .tool_corteSuprema_DTGaleria118 {
+        left: 58%;
+        top: 42%
+    }
+    .tool_corteSuprema_DH011 {
+        left: 48%;
+        top: 22%
+    }
+    .tool_corteSuprema_DH012 {
+        left: 51%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH015 {
+        left: 59%;
+        top: 22%
+    }
+    .tool_corteSuprema_DH017 {
+        left: 46%;
+        top: 47%
+    }
+    .tool_corteSuprema_DH018 {
+        left: 46%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH021 {
+        left: 46%;
+        top: 50%
+    }
+    .tool_corteSuprema_DH022 {
+        left: 47%;
+        top: 31%
+    }
+    .tool_corteSuprema_DH030 {
+        left: 48%;
+        top: 61%
+    }
+    .tool_corteSuprema_DH035 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH033 {
+        left: 39%;
+        top: 36%
+    }
+    .tool_corteSuprema_DH037 {
+        left: 48%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH042 {
+        left: 57%;
+        top: 36%
+    }
+    .tool_corteSuprema_DH046 {
+        left: 39%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH039 {
+        left: 48%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH053 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH032 {
+        left: 39%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH093 {
+        left: 48%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH040 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH096 {
+        left: 39%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH097 {
+        left: 48%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH095 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH108 {
+        left: 39%;
+        top: 34%
+    }
+    .tool_corteSuprema_DH110 {
+        left: 48%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH107 {
+        left: 57%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM121 {
+        left: 59%;
+        top: 39%
+    }
+    .tool_corteSuprema_EM122 {
+        left: 42%;
+        top: 39%
+    }
+    .tool_corteSuprema_VAA121 {
+        left: 55%;
+        top: 32%
+    }
+    .tool_corteSuprema_EM011 {
+        left: 56%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM012 {
+        left: 47%;
+        top: 34%
+    }
+    .tool_corteSuprema_VAA011 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_EM017 {
+        left: 49.333%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM018 {
+        left: 17%;
+        top: 58%
+    }
+    .tool_corteSuprema_VAA017 {
+        left: 53%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM021 {
+        left: 46%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM022 {
+        left: 48%;
+        top: 54%
+    }
+    .tool_corteSuprema_VAA021 {
+        left: 52%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM030 {
+        left: 45%;
+        top: 23%
+    }
+    .tool_corteSuprema_EM035 {
+        left: 48%;
+        top: 68%
+    }
+    .tool_corteSuprema_VAA030 {
+        left: 51%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM033 {
+        left: 47%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM037 {
+        left: 46%;
+        top: 44%
+    }
+    .tool_corteSuprema_VAA033 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM046 {
+        left: 47%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM039 {
+        left: 46%;
+        top: 44%
+    }
+    .tool_corteSuprema_VAA046 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM032 {
+        left: 47%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM093 {
+        left: 46%;
+        top: 44%
+    }
+    .tool_corteSuprema_VAA032 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM096 {
+        left: 46%;
+        top: 44%
+    }
+    .tool_corteSuprema_VAA096 {
+        left: 50%;
+        top: 33%
+    }
+}
+
+@media (max-width: 460px) {
+    .tooltipimg {
+        border-radius: 18px;
+        font-size: 11px;
+        padding: 5px;
+    }
+    .tooltipimg span {
+        line-height: 1.8;
+        padding: 0 5px;
+    }
+    .tooltipimg .alarm_zone,
+    .tooltipimg .state_zone {
+        border-radius: 20px;
+        width: 20px;
+        height: 20px;
+    }
+    .tooltipserver {
+        border-radius: 13px;
+        font-size: 7px;
+        padding: 1px;
+    }
+    .tooltipserver span {
+        line-height: 1.8;
+        padding: 0 5px;
+    }
+    .tooltipserver .alarm_zone {
+        border-radius: 10px;
+        width: 10px;
+        height: 10px;
+    }
+    .tool_gen {
+        left: 40%;
+        top: 52%
+    }
+    .tool_panel_incendio {
+        left: 2%;
+        top: 14%
+    }
+    .tool_tanque_captacion {
+        left: 32%;
+        top: 28%
+    }
+    .tool_transformador {
+        left: 2%;
+        top: 40%
+    }
+    .tool_piso01 {
+        left: 8%;
+        top: 63%
+    }
+    .tool_piso02 {
+        left: 15.3%;
+        top: 52%
+    }
+    .tool_piso03 {
+        left: 15.2%;
+        top: 45.8%
+    }
+    .tool_piso04 {
+        left: 15.1%;
+        top: 39.6%
+    }
+    .tool_piso05 {
+        left: 15%;
+        top: 33.4%
+    }
+    .tool_piso06 {
+        left: 14.9%;
+        top: 26.9%
+    }
+    .tool_piso07 {
+        left: 14.8%;
+        top: 20.7%
+    }
+    .tool_piso08 {
+        left: 14.7%;
+        top: 14.5%
+    }
+    .tool_piso09 {
+        left: 14.6%;
+        top: 8%
+    }
+    .tool_corteSuprema_DH021 {
+        left: 44%;
+        top: 49%
+    }
+    .tool_corteSuprema_DH022 {
+        left: 45%;
+        top: 27%
+    }
+    .tool_corteSuprema_DH030 {
+        left: 46%;
+        top: 52%
+    }
+    .tool_corteSuprema_DH035 {
+        left: 45%;
+        top: 10%
+    }
+    .tool_corteSuprema_DH033 {
+        left: 39%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH037 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH042 {
+        left: 55%;
+        top: 29%
+    }
+    .tool_corteSuprema_DH046 {
+        left: 39%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH039 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH053 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH032 {
+        left: 39%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH093 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH040 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH096 {
+        left: 39%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH097 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH095 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH108 {
+        left: 39%;
+        top: 25%
+    }
+    .tool_corteSuprema_DH110 {
+        left: 47%;
+        top: 18%
+    }
+    .tool_corteSuprema_DH107 {
+        left: 55%;
+        top: 25%
+    }
+    .tool_corteSuprema_EM121 {
+        left: 58%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM122 {
+        left: 45%;
+        top: 35%
+    }
+    .tool_corteSuprema_VAA121 {
+        left: 52%;
+        top: 27%
+    }
+    .tool_corteSuprema_EM011 {
+        left: 56%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM012 {
+        left: 47%;
+        top: 34%
+    }
+    .tool_corteSuprema_VAA011 {
+        left: 54%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM017 {
+        left: 49%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM018 {
+        left: 15%;
+        top: 53%
+    }
+    .tool_corteSuprema_VAA017 {
+        left: 53%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM021 {
+        left: 45%;
+        top: 20%
+    }
+    .tool_corteSuprema_EM022 {
+        left: 48%;
+        top: 52%
+    }
+    .tool_corteSuprema_VAA021 {
+        left: 51%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM030 {
+        left: 45%;
+        top: 22%
+    }
+    .tool_corteSuprema_EM035 {
+        left: 48%;
+        top: 68%
+    }
+    .tool_corteSuprema_VAA030 {
+        left: 51%;
+        top: 35%
+    }
+    .tool_corteSuprema_EM033 {
+        left: 45%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM037 {
+        left: 45%;
+        top: 45%
+    }
+    .tool_corteSuprema_VAA033 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM046 {
+        left: 45%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM039 {
+        left: 45%;
+        top: 45%
+    }
+    .tool_corteSuprema_VAA046 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM032 {
+        left: 45%;
+        top: 34%
+    }
+    .tool_corteSuprema_EM093 {
+        left: 45%;
+        top: 45%
+    }
+    .tool_corteSuprema_VAA032 {
+        left: 50%;
+        top: 33%
+    }
+    .tool_corteSuprema_EM096 {
+        left: 45%;
+        top: 45%
+    }
+    .tool_corteSuprema_VAA096 {
+        left: 50%;
+        top: 33%
+    }
+}
+
+
+
+/* Clases tooltips Alarmas de incendio Piso3*/
+
+.sp301{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp302{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp303{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp304{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp305{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp306{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp307{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp308{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp309{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp310{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp311{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp312{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp313{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp314{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp315{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp334{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp333{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp332{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp331{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp330{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp329{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp328{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp327{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp326{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp325{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp324{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp323{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp322{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp321{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp320{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp319{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp318{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp317{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp316{
+    
+     top: 25%;
+         left: 33%;
+
+}
+/* Clases tooltips Alarmas de incendio Piso4*/
+
+.sp401{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp402{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp403{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp404{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp405{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp406{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp407{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp408{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp409{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp410{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp411{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp412{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp413{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp414{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp415{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp434{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp433{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp432{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp431{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp430{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp429{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp428{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp427{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp426{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp425{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp424{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp423{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp422{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp421{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp420{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp419{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp418{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp417{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp416{
+    
+     top: 25%;
+         left: 33%;
+
+}
+
+/* Clases tooltips Alarmas de incendio Piso5*/
+
+.sp501{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp502{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp503{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp504{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp505{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp506{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp507{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp508{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp509{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp510{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp511{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp512{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp513{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp514{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp515{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp534{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp533{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp532{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp531{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp530{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp529{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp528{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp527{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp526{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp525{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp524{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp523{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp522{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp521{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp520{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp519{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp518{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp517{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp516{
+    
+     top: 25%;
+         left: 33%;
+
+}
+
+/* Clases tooltips Alarmas de incendio Piso6*/
+
+.sp601{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp602{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp603{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp604{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp605{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp606{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp607{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp608{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp609{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp610{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp611{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp612{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp613{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp614{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp615{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp634{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp633{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp632{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp631{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp630{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp629{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp628{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp627{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp626{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp625{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp624{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp623{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp622{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp621{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp620{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp619{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp618{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp617{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp616{
+    
+     top: 25%;
+         left: 33%;
+
+}
+
+/* Clases tooltips Alarmas de incendio Piso7*/
+/*
+.sp701{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp702{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp703{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp704{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp705{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp706{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp707{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp708{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp709{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp710{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp711{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp712{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp713{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp714{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp715{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp734{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp733{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp732{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp731{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp730{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp729{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp728{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp727{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp726{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp725{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp724{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp723{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp722{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp721{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp720{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp719{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp718{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp717{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp716{
+    
+     top: 25%;
+         left: 33%;
+
+}
+*/
+/* Clases tooltips Alarmas de incendio Piso8*/
+/*
+.sp801{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp802{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp803{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp804{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp805{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp806{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp807{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp808{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp809{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp810{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp811{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp812{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp813{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp814{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp815{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp834{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp833{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp832{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp831{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp830{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp829{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp828{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp827{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp826{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp825{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp824{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp823{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp822{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp821{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp820{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp819{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp818{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp817{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp816{
+    
+     top: 25%;
+         left: 33%;
+
+}
+
+/* Clases tooltips Alarmas de incendio Piso9
+
+.sp901{
+    
+        top: 22%;
+         left: 11%;
+
+}
+.sp902{
+    
+        top: 30%;
+         left: 8%;
+
+}
+.sp903{
+    
+        top: 30%;
+         left: 10%;
+
+}
+.sp904{
+    
+        top: 37%;
+         left: 10%;
+
+}
+.sp905{
+    
+        top: 45%;
+         left: 11%;
+
+}
+.sp906{
+    
+        top: 47%;
+         left: 5%;
+
+}
+.sp907{
+    
+        top: 55%;
+         left: 8%;
+
+}
+.sp908{
+    
+       top: 22%;
+         left: 15%;
+
+}
+.sp909{
+    
+       top: 30%;
+         left: 18%;
+
+}
+.sp910{
+    
+       top: 40%;
+         left: 18%;
+
+}
+.sp911{
+    
+       top: 45%;
+         left: 16%;
+
+}
+.sp912{
+    
+      top: 30%;
+         left: 22%;
+
+}
+.sp913{
+    
+      top: 30%;
+         left: 27%;
+
+}
+.sp914{
+    
+      top: 45%;
+         left: 26%;
+
+}
+.sp915{
+    
+      top: 55%;
+         left: 26%;
+
+}
+.sp934{
+    
+      top: 40%;
+         left: 63%;
+
+}
+.sp933{
+    
+      top: 45%;
+         left: 60%;
+
+}
+.sp932{
+    
+      top: 30%;
+         left: 60%;
+
+}
+.sp931{
+    
+      top: 23%;
+         left: 55%;
+
+}
+.sp930{
+    
+      top: 30%;
+         left: 52%;
+
+}
+.sp929{
+    
+      top: 40%;
+         left: 53%;
+
+}
+.sp928{
+    
+      top: 50%;
+         left: 52%;
+
+}
+.sp927{
+    
+      top: 50%;
+         left: 48%;
+
+}
+.sp926{
+    
+      top: 40%;
+         left: 50%;
+
+}
+.sp925{
+    
+      top: 40%;
+         left: 47%;
+
+}
+.sp924{
+    
+      top: 30%;
+         left: 45%;
+
+}
+.sp923{
+    
+      top: 22%;
+         left: 43%;
+
+}
+.sp922{
+    
+      top: 22%;
+         left: 49%;
+
+}
+
+.sp921{
+    
+     top: 50%;
+         left: 43%;
+
+}
+.sp920{
+    
+     top: 50%;
+         left: 39%;
+
+}
+.sp919{
+    
+     top: 50%;
+         left: 30%;
+
+}
+.sp918{
+    
+     top: 40%;
+         left: 30%;
+
+}
+.sp917{
+    
+     top: 30%;
+         left: 30%;
+
+}
+.sp916{
+    
+     top: 25%;
+         left: 33%;
+
+}
+
+

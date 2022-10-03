@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nav version='1.0'>
+<node name='Home' ord='file:^HtmlVersion/home.html' icon='module://icons/x16/home.png'>
+  <node name='Usuarios' ord='station:|slot:/Services/UserService' icon='module://icons/x16/users.png'/>
+  <node name='BMS' ord='file:^HtmlVersion/home.html' icon='module://icons/x16/folder.png'/>
+</node>
+</nav>

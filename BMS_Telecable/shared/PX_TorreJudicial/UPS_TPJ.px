@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="bajauxProgressBar"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="jxBrowser"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<EdgePane>
+
+  <FlowPane name="left" align="fill" hgap="10" vgap="20" background="#373e47">
+
+    <ResponsivePane maxWidth="50.0%" minWidth="pref" forceNewRow="true"/>
+
+    <ResponsivePane maxWidth="25.0%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,680.0" background="#272c33">
+
+        <Label layout="0.0,90.0,300.0,526.0" image="file:^images/equipos/eatonUPS.png"/>
+
+        <Line stroke="white" geom="180.0,45.0 5.0,45.0"/>
+
+        <Label layout="5.0,20.0,155.0,20.0" text="UPS Eaton 93PM" font="16.0pt Arial" foreground="white" halign="left"/>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="2.0" minWidth="pref">
+
+      <Line name="content" geom="0.0,0.0 1920.0,0.0"/>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+  <EdgePane name="center">
+
+    <ScrollPane name="center" viewportBackground="white">
+
+      <FlowPane name="content" align="fill" hgap="20" vgap="20" background="#373e47">
+
+        <ResponsivePane maxWidth="100.0%" minWidth="pref" forceNewRow="true"/>
+
+        <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+          <CanvasPane name="content" viewSize="385.0,330.0" background="#272c33">
+
+            <Label layout="30.0,230.0,40.0,40.0" image="file:^BMS_Electrotecnica/Images_Electrotecnica/iconos/ico_loadbattery.png"/>
+
+            <Label layout="30.0,60.0,40.0,40.0" image="file:^BMS_Electrotecnica/Images_Electrotecnica/iconos/ico_loadups.png"/>
+
+            <WebWidget layout="90.0,70.0,210.0,220.0" js="view:bajauxProgressBar:ProgressBarGauge">
+              <Boolean name="enabled" f="3" value="true"/>
+              <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Potencia_Salida_Total"/>
+              <ProgressBarType name="gaugeType" f="3" value="Circle"/>
+              <String name="overrideOrd" f="rh3" value=""/>
+              <String name="valueText" f="3" value="%out.value%"/>
+              <Double name="min" f="3" value="0.0"/>
+              <Double name="max" f="3" value="120.0"/>
+              <Color name="fill" f="3" value="#fefefe"/>
+              <Color name="background" f="3" value="#272c33"/>
+              <Color name="trailColor" f="3" value="#5a5a5a"/>
+              <Color name="textColor" f="3" value="white"/>
+              <Font name="font" f="3" value="16.0pt Arial"/>
+              <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="true"/>
+              <Double name="lineWidth" f="3" value="23.0"/>
+              <Color name="barColorStart" f="3" value="#ce513f"/>
+              <Color name="barColorEnd" f="3" value="#b47b37"/>
+            </WebWidget>
+
+            <Label layout="160.0,20.0,90.0,20.0" text="Carga UPS" font="14.0pt Arial" foreground="white" halign="left"/>
+
+            <Label layout="100.0,60.0,180.0,40.0" font="20.0pt Arial" halign="left">
+              <ValueBinding ord="station:|slot:/Drivers/BacnetNetwork/UPS_A/points/Variables/EstadoUPS_UPS_A">
+                <ValueToString name="text" format="%out.value%"/>
+                <IStatusToSimple name="foreground">
+                  <Brush name="disabled" value="white"/>
+                  <Brush name="fault" value="#ff4040"/>
+                  <Brush name="down" value="#ff4040"/>
+                  <Brush name="alarm" value="white"/>
+                  <Brush name="stale" value="white"/>
+                  <Brush name="overridden" value="white"/>
+                  <Brush name="nullStatus" value="white"/>
+                  <Brush name="unackedAlarm" value="white"/>
+                  <Brush name="ok" value="white"/>
+                </IStatusToSimple>
+                <IStatusToSimple name="blink">
+                  <Boolean name="fault" value="true"/>
+                  <Boolean name="down" value="true"/>
+                  <Boolean name="alarm" value="true"/>
+                  <Boolean name="unackedAlarm" value="true"/>
+                </IStatusToSimple>
+              </ValueBinding>
+            </Label>
+
+            <Label layout="105.0,5.0,53.0,50.0" image="file:^images/iconos/ico_electrico.png"/>
+
+          </CanvasPane>
+
+        </ResponsivePane>
+
+        <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+          <TabbedPane name="content" paintFullBorder="false">
+
+            <LabelPane>
+
+              <Label name="label" text="Entrada"/>
+
+              <CanvasPane name="content" viewSize="385.0,300.0" background="#272c33">
+
+                <Label layout="165.0,10.0,50.0,20.0" text="A" font="16.0pt Arial" foreground="white"/>
+
+                <Label layout="225.0,10.0,50.0,20.0" text="B" font="16.0pt Arial" foreground="white"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,50.0,385.0,40.0"/>
+
+                <BoundLabel layout="225.0,50.0,55.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Entrada_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="20.0,50.0,80.0,40.0" text="Voltaje L-L" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="160.0,50.0,60.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Entrada_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="162.0,170.0,58.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/BacnetNetwork/UPS_A/points/Variables/FrecuenciaEntrada_UPS_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="290.0,10.0,50.0,20.0" text="C" font="16.0pt Arial" foreground="white"/>
+
+                <BoundLabel layout="290.0,50.0,60.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Entrada_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+              </CanvasPane>
+
+            </LabelPane>
+
+            <LabelPane>
+
+              <Label name="label" text="Salida"/>
+
+              <CanvasPane name="content" visible="false" viewSize="385.0,300.0" background="#272c33">
+
+                <Rect pen="0.0" geom="-130.0,35.0,490.0,50.0"/>
+
+                <Label layout="165.0,10.0,50.0,20.0" text="A" font="16.0pt Arial" foreground="white"/>
+
+                <Label layout="225.0,10.0,50.0,20.0" text="B" font="16.0pt Arial" foreground="white"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,50.0,385.0,40.0"/>
+
+                <BoundLabel layout="225.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_BC" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="20.0,50.0,80.0,40.0" text="Voltaje L-L" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,130.0,385.0,40.0"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,210.0,385.0,40.0"/>
+
+                <Label layout="20.0,130.0,100.0,40.0" text="Corriente" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Salida_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Salida_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="165.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_AB" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="10.0,210.0,130.0,40.0" text="Frecuencia" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="160.0,210.0,70.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Frecuencia_Salida" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="290.0,10.0,50.0,20.0" text="C" font="16.0pt Arial" foreground="white"/>
+
+                <BoundLabel layout="290.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_CA" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="290.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Salida_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="0.0,170.0,140.0,40.0" text="Porcentaje Carga" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,170.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Porcentaje_Carga_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,170.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Porcentaje_Carga_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="290.0,170.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Porcentaje_Carga_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="20.0,90.0,80.0,40.0" text="Voltaje L-N" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="290.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Salida_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+              </CanvasPane>
+
+            </LabelPane>
+
+            <LabelPane>
+
+              <Label name="label" text="Potencia"/>
+
+              <CanvasPane name="content" visible="false" viewSize="385.0,300.0" background="#272c33">
+
+                <Label layout="165.0,35.0,50.0,20.0" text="A" font="16.0pt Arial" foreground="white"/>
+
+                <Label layout="210.0,35.0,50.0,20.0" text="B" font="16.0pt Arial" foreground="white"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,85.0,385.0,40.0"/>
+
+                <BoundLabel layout="210.0,85.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Potencia_Salida_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="20.0,85.0,110.0,40.0" text="Potencia Real" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="160.0,85.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Potencia_Salida_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="160.0,245.0,65.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Jace1_Electrotecnica/points/UPSA/PotenciaAparenteSalida_UPSA" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="255.0,35.0,50.0,20.0" text="C" font="16.0pt Arial" foreground="white"/>
+
+                <Label layout="310.0,35.0,50.0,20.0" text="Total" font="16.0pt Arial" foreground="white"/>
+
+                <BoundLabel layout="260.0,85.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Potencia_Salida_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="305.0,85.0,60.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Potencia_Salida_Total" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+              </CanvasPane>
+
+            </LabelPane>
+
+            <LabelPane>
+
+              <Label name="label" text="Bypass"/>
+
+              <CanvasPane name="content" visible="false" viewSize="385.0,300.0" background="#272c33">
+
+                <Rect pen="0.0" geom="-130.0,35.0,490.0,50.0"/>
+
+                <Label layout="165.0,10.0,50.0,20.0" text="A" font="16.0pt Arial" foreground="white"/>
+
+                <Label layout="225.0,10.0,50.0,20.0" text="B" font="16.0pt Arial" foreground="white"/>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,50.0,385.0,40.0"/>
+
+                <Label layout="20.0,50.0,80.0,40.0" text="Voltaje L-L" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_AB" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_BC" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="280.0,10.0,50.0,20.0" text="C" font="16.0pt Arial" foreground="white"/>
+
+                <BoundLabel layout="280.0,50.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_BC" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Rect fill="#44505f" pen="0.0" geom="0.0,130.0,385.0,40.0"/>
+
+                <Label layout="20.0,130.0,100.0,40.0" text="Corriente" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Bypass_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Bypass_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="290.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Corriente_Bypass_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <Label layout="20.0,90.0,80.0,40.0" text="Voltaje L-N" font="16.0pt Arial" foreground="white" halign="left"/>
+
+                <BoundLabel layout="165.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_A" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="225.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_B" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+                <BoundLabel layout="290.0,90.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+                  <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Voltaje_Bypass_C" statusEffect="none">
+                    <ObjectToString name="text" format="%out.value%"/>
+                  </BoundLabelBinding>
+                </BoundLabel>
+
+              </CanvasPane>
+
+            </LabelPane>
+
+            <LabelPane>
+
+              <Label name="label" text="Historico potencia"/>
+
+              <WebWidget name="content" visible="false" js="view:webChart:ChartWidget" preferredSize="385.0,300.0">
+                <Boolean name="enabled" f="3" value="true"/>
+                <WbViewBinding ord="history:/BMS_Poder_Judicial/potenciaSalidaTotal_UPS_CS"/>
+                <Ord name="defaultOptions" f="3" value="file:^charts/defaultOptions.chart"/>
+                <String name="title" f="3" value=""/>
+                <String name="dashboardChartData" f="rh3" value=""/>
+              </WebWidget>
+
+            </LabelPane>
+
+            <LabelPane>
+
+              <Label name="label" text="Mant. Alarmas"/>
+
+              <CanvasPane name="content" visible="false" viewSize="385.0,300.0" background="#272c33">
+
+                <Rect pen="0.0" geom="-130.0,35.0,490.0,50.0"/>
+
+                <Label layout="80.0,20.0,200.0,30.0" text="Mantenimiento alarmas" font="16.0pt Arial" foreground="white"/>
+
+                <ImageButton layout="125.0,110.0,130.0,40.0" buttonStyle="none">
+                  <ActionBinding ord="station:|slot:/Services/AlarmService/mantimientoAlarmas_UPS_corteSuprema/set" degradeBehavior="disable" widgetEvent="actionPerformed"/>
+                  <ValueBinding ord="station:|slot:/Services/AlarmService/mantimientoAlarmas_UPS_corteSuprema">
+                    <IBooleanToSimple name="image">
+                      <Image name="trueValue" value="file:^images/botones/btn_alarma-out.png"/>
+                      <Image name="falseValue" value="file:^images/botones/btn_alarma-in.png"/>
+                    </IBooleanToSimple>
+                  </ValueBinding>
+                </ImageButton>
+
+              </CanvasPane>
+
+            </LabelPane>
+
+          </TabbedPane>
+
+        </ResponsivePane>
+
+        <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+          <CanvasPane name="content" viewSize="350.0,325.0" background="#272c33">
+
+            <Label layout="20.0,90.0,150.0,40.0" text="Carga bater&#xed;a" font="16.0pt Arial" foreground="white" halign="left"/>
+
+            <BoundLabel layout="205.0,90.0,75.0,40.0" font="12.0pt Arial" foreground="white">
+              <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/cargaBateria" statusEffect="none">
+                <ObjectToString name="text" format="%out.value%"/>
+              </BoundLabelBinding>
+            </BoundLabel>
+
+            <Rect fill="#44505f" pen="0.0" geom="0.0,130.0,385.0,40.0"/>
+
+            <BoundLabel layout="215.0,130.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+              <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Temperatura_Ambiente" statusEffect="none">
+                <ObjectToString name="text" format="%out.value%"/>
+              </BoundLabelBinding>
+            </BoundLabel>
+
+            <Label layout="20.0,130.0,170.0,40.0" text="Temperatura ambiente" font="16.0pt Arial" foreground="white" halign="left"/>
+
+            <BoundLabel layout="215.0,170.0,50.0,40.0" font="12.0pt Arial" foreground="white">
+              <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/voltajeBateria" statusEffect="none">
+                <ObjectToString name="text" format="%out.value%"/>
+              </BoundLabelBinding>
+            </BoundLabel>
+
+            <Label layout="10.0,170.0,200.0,40.0" text="Voltaje total banco bater&#xed;as" font="16.0pt Arial" foreground="white"/>
+
+            <Label layout="170.0,20.0,70.0,20.0" text="Bater&#xed;a" font="16.0pt Arial" foreground="white" halign="left"/>
+
+            <Label layout="115.0,5.0,53.0,50.0" image="file:^images/iconos/ico_electrico.png"/>
+
+          </CanvasPane>
+
+        </ResponsivePane>
+
+        <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+          <CanvasPane name="content" viewSize="350.0,325.0" background="#272c33">
+
+            <Label layout="130.0,19.0,127.0,20.0" text="Alarmas" font="16.0pt SansSerif" foreground="white"/>
+
+            <Picture layout="125.0,15.0,30.0,25.0" image="file:^PX_TorreJudicial/iconos/toolestado_alarmado.png" scale="fitRatio"/>
+
+            <Label layout="45.0,70.0,210.0,20.0" text="UPS en bypass" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Ellipse geom="300.0,75.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Sistema_Bypass">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="#c00000"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Line stroke="white" geom="325.0,95.0 45.0,95.0"/>
+
+            <Label layout="45.0,100.0,210.0,20.0" text="UPS en bater&#xed;as" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Line stroke="white" geom="325.0,125.0 45.0,125.0"/>
+
+            <Label layout="45.0,130.0,210.0,20.0" text="Sobretensi&#xf3;n a la salida" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Line stroke="white" geom="325.0,155.0 45.0,155.0"/>
+
+            <Label layout="45.0,160.0,210.0,20.0" text="Sobrecarga a la salida" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Ellipse geom="300.0,105.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Sistema_Bateria">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="red"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Line stroke="white" geom="325.0,185.0 45.0,185.0"/>
+
+            <Label layout="45.0,190.0,210.0,20.0" text="Bater&#xed;a desconectada" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Line stroke="white" geom="325.0,215.0 45.0,215.0"/>
+
+            <Ellipse geom="300.0,195.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Bateria_Desconectada">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="#c00000"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Label layout="45.0,220.0,210.0,20.0" text="Voltaje bater&#xed;a bajo" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Line stroke="white" geom="325.0,245.0 45.0,245.0"/>
+
+            <Label layout="45.0,245.0,210.0,20.0" text="Fallo frecuencia salida" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Ellipse geom="300.0,250.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_FrecuenciaSalida_Fallida">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="#c00000"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Label layout="45.0,45.0,230.0,20.0" text="Perdida de comunicaci&#xf3;n " font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+            <Line stroke="white" geom="325.0,70.0 45.0,70.0"/>
+
+            <Ellipse geom="300.0,165.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Sobrecarga_Salida">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="red"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Ellipse geom="300.0,135.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Salida_SobreVoltaje_AC">
+                <IBooleanToSimple name="fill">
+                  <Brush name="trueValue" value="red"/>
+                  <Brush name="falseValue" value="silver"/>
+                </IBooleanToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Ellipse geom="300.0,225.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/Alarma_Voltaje_Bateria_MuyBaja">
+                <IStatusToSimple name="fill">
+                  <Brush name="disabled" value="red"/>
+                  <Brush name="fault" value="red"/>
+                  <Brush name="down" value="red"/>
+                  <Brush name="alarm" value="red"/>
+                  <Brush name="stale" value="silver"/>
+                  <Brush name="overridden" value="silver"/>
+                  <Brush name="nullStatus" value="silver"/>
+                  <Brush name="unackedAlarm" value="silver"/>
+                  <Brush name="ok" value="silver"/>
+                </IStatusToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+            <Ellipse geom="300.0,50.0,16.0,16.0">
+              <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/UPS/PF_Entrada_C">
+                <IStatusToSimple name="fill">
+                  <Brush name="disabled" value="red"/>
+                  <Brush name="fault" value="red"/>
+                  <Brush name="down" value="red"/>
+                  <Brush name="alarm" value="red"/>
+                  <Brush name="stale" value="silver"/>
+                  <Brush name="overridden" value="silver"/>
+                  <Brush name="nullStatus" value="silver"/>
+                  <Brush name="unackedAlarm" value="silver"/>
+                  <Brush name="ok" value="silver"/>
+                </IStatusToSimple>
+              </ValueBinding>
+            </Ellipse>
+
+          </CanvasPane>
+
+        </ResponsivePane>
+
+      </FlowPane>
+
+    </ScrollPane>
+
+  </EdgePane>
+
+</EdgePane>
+</content>
+</px>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,800.0" scale="fitRatio" minScaleFactor="0.5" maxScaleFactor="1.0">
+
+    <ImageButton layout="320.0,290.0,100.0,20.0" text="Set">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Extractores/comandoExtractor20/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

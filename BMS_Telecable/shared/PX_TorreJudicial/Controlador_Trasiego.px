@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="bajauxProgressBar"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="jxBrowser"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <FlowPane name="content" align="fill" background="#363f47">
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,20.0"/>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="60.0,5.0,170.0,20.0" text="Panel Trasiego" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="80.0,60.0,100.0,100.0" scale="fitRatio">
+          <ValueBinding/>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="85.0,9.0,137.0,20.0" text="Estado Alarma" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="55.0,40.0,190.0,190.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Falla_General">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_alarmado.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_noalarmado.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="100.0,15.0,137.0,20.0" text="Estado Llenado" font="16.0pt SansSerif" foreground="white"/>
+
+        <Label layout="100.0,150.0,137.0,20.0" text="Estado Solenoide" font="16.0pt SansSerif" foreground="white"/>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="70.0,9.0,147.0,20.0" text="Marcha Bombas" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="165.0,50.0,100.0,100.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Marcha_Bomba_01">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_bomba-on.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_bomba-off.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+        <Label layout="25.0,70.0,130.0,40.0" text="Bomba 01" font="bold 26.0pt SansSerif" foreground="white"/>
+
+        <Label layout="25.0,185.0,130.0,40.0" text="Bomba 02" font="bold 26.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="165.0,165.0,100.0,100.0" scale="fitRatio">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Marcha_Bomba_02">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/indicadores/estado_bomba-on.png"/>
+              <Image name="falseValue" value="file:^images/indicadores/estado_bomba-off.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="75.0,10.0,147.0,20.0" text="Nivel Tanques" font="16.0pt SansSerif" foreground="white"/>
+
+        <WebWidget layout="70.0,40.0,150.0,90.0" js="view:bajauxProgressBar:ProgressBarGauge">
+          <Boolean name="enabled" f="3" value="true"/>
+          <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Nivel_Tanque_01"/>
+          <ProgressBarType name="gaugeType" f="3" value="SemiCircle"/>
+          <String name="overrideOrd" f="rh3" value=""/>
+          <String name="valueText" f="3" value="%out.value%"/>
+          <Double name="min" f="3" value="-1.0"/>
+          <Double name="max" f="3" value="-100.0"/>
+          <Color name="fill" f="3" value="white"/>
+          <Color name="background" f="3" value="#272d32"/>
+          <Color name="barColorStart" f="3" value="#ff4040"/>
+          <Color name="barColorEnd" f="3" value="#40ff40"/>
+          <Color name="trailColor" f="3" value="#f4f4f4"/>
+          <Color name="textColor" f="3" value="white"/>
+          <Font name="font" f="3" value="20.0pt SansSerif"/>
+          <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="true"/>
+          <Double name="lineWidth" f="3" value="5.0"/>
+        </WebWidget>
+
+        <Label layout="100.0,130.0,100.0,20.0" text="Nivel Tanque 01" font="14.0pt SansSerif" foreground="white"/>
+
+        <WebWidget layout="70.0,165.0,150.0,85.0" js="view:bajauxProgressBar:ProgressBarGauge">
+          <Boolean name="enabled" f="3" value="true"/>
+          <WbViewBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Nivel_Tanque_02"/>
+          <ProgressBarType name="gaugeType" f="3" value="SemiCircle"/>
+          <String name="overrideOrd" f="rh3" value=""/>
+          <String name="valueText" f="3" value="%out.value%"/>
+          <Double name="min" f="3" value="-1.0"/>
+          <Double name="max" f="3" value="-100.0"/>
+          <Color name="fill" f="3" value="white"/>
+          <Color name="background" f="3" value="#272d32"/>
+          <Color name="barColorStart" f="3" value="#ff4040"/>
+          <Color name="barColorEnd" f="3" value="#40ff40"/>
+          <Color name="trailColor" f="3" value="#f4f4f4"/>
+          <Color name="textColor" f="3" value="white"/>
+          <Font name="font" f="3" value="20.0pt SansSerif"/>
+          <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="true"/>
+          <Double name="lineWidth" f="3" value="5.0"/>
+        </WebWidget>
+
+        <Label layout="100.0,255.0,100.0,20.0" text="Nivel Tanque 02" font="14.0pt SansSerif" foreground="white"/>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="95.0,9.0,127.0,20.0" text="Alarmas" font="16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="90.0,5.0,30.0,25.0" image="file:^PX_TorreJudicial/iconos/toolestado_alarmado.png" scale="fitRatio"/>
+
+        <Label layout="10.0,60.0,210.0,20.0" text="Falla VDF 01" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse geom="265.0,65.0,16.0,16.0">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/VFD_01">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="#c00000"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Line stroke="white" geom="290.0,85.0 10.0,85.0"/>
+
+        <Label layout="10.0,120.0,210.0,20.0" text="Bomba 01 Activa" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,115.0 10.0,115.0"/>
+
+        <Label layout="10.0,150.0,210.0,20.0" text="Bomba 02 Activa" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,145.0 10.0,145.0"/>
+
+        <Line stroke="white" geom="290.0,175.0 10.0,175.0"/>
+
+        <Label layout="10.0,180.0,210.0,20.0" text="Falla General" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Line stroke="white" geom="290.0,205.0 10.0,205.0"/>
+
+        <Ellipse geom="265.0,185.0,16.0,16.0">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Falla_General">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="#c00000"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,215.0,16.0,16.0">
+          <ValueBinding ord="slot:frecuenciaMotor">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="red"/>
+              <Brush name="fault" value="red"/>
+              <Brush name="down" value="red"/>
+              <Brush name="alarm" value="red"/>
+              <Brush name="stale" value="silver"/>
+              <Brush name="overridden" value="silver"/>
+              <Brush name="nullStatus" value="silver"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="silver"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,40.0,16.0,16.0">
+          <ValueBinding ord="slot:tempRetorno">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="red"/>
+              <Brush name="fault" value="red"/>
+              <Brush name="down" value="red"/>
+              <Brush name="alarm" value="red"/>
+              <Brush name="stale" value="silver"/>
+              <Brush name="overridden" value="silver"/>
+              <Brush name="nullStatus" value="silver"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="silver"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,240.0,16.0,16.0">
+          <ValueBinding ord="slot:Desconexion_AC_AHU">
+            <IStatusToSimple name="fill">
+              <Brush name="disabled" value="#d6d6d6"/>
+              <Brush name="fault" value="#fc7734"/>
+              <Brush name="down" value="#fac600"/>
+              <Brush name="alarm" value="#cf1624"/>
+              <Brush name="stale" value="#d9c09d"/>
+              <Brush name="overridden" value="#bfaddd"/>
+              <Brush name="nullStatus" value="#e0e0e0"/>
+              <Brush name="unackedAlarm" value="silver"/>
+              <Brush name="ok" value="#e0e0e0"/>
+            </IStatusToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Label layout="10.0,90.0,210.0,20.0" text="Falla VDF 02" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse geom="265.0,90.0,16.0,16.0">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/VFD_02">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="#c00000"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,120.0,16.0,16.0">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Bomba_01">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="#c00000"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+        <Ellipse geom="265.0,150.0,16.0,16.0">
+          <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/SJOBMS04/points/Controlador_Trasiego/Bomba_02">
+            <IBooleanToSimple name="fill">
+              <Brush name="trueValue" value="#c00000"/>
+              <Brush name="falseValue" value="silver"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Ellipse>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+</ScrollPane>
+</content>
+</px>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<EdgePane>
+
+  <ScrollPane name="center" viewportBackground="#373e47">
+
+    <FlowPane name="content" align="fill" hgap="20" vgap="20" background="#373e47">
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref" forceNewRow="true"/>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref" forceNewRow="true">
+
+        <CanvasPane name="content" viewSize="375.0,325.0" background="#272c33">
+
+          <BoundLabel layout="230.0,80.0,170.0,99.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <Label layout="0.0,15.0,190.0,20.0" font="underline 16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:">
+              <ValueToString name="text" format="%name%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="0.0,40.0,90.0,20.0" text="Editar estado" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <BoundLabel layout="0.0,220.0,170.0,99.0" image="module://kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="230.0,230.0,170.0,99.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="210.0,220.0,170.0,99.0" image="module://kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="210.0,70.0,170.0,99.0" image="module://kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="40.0,70.0,170.0,99.0" image="module://kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="0.0,70.0,170.0,99.0" image="module://kitPxGraphics/Ductwork/Duct_Horz_Short.png"/>
+
+          <BoundLabel layout="65.0,70.0,147.0,99.0">
+            <ValueBinding ord="slot:FAN_S">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Fans/Fans_Horz/Fans_Horz_Left/Fans_Horz_Left_On.gif"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Fans/Fans_Horz/Fans_Horz_Left/Fans_Horz_Left_Off.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="205.0,70.0,111.0,249.0">
+            <ValueBinding ord="slot:RE_C">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Misc/Misc_HeatWheel2/HeatWheel2/misc_heatwheel2_On.gif"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Misc/Misc_HeatWheel2/HeatWheel2/misc_heatwheel2_Off.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="0.0,220.0,147.0,99.0">
+            <ValueBinding ord="slot:FAN_S">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Fans/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_On.gif"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Fans/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_Off.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="285.0,220.0,86.0,99.0">
+            <ValueBinding ord="slot:filtro">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Filters/Filter_Single/Filter_Single_4.png"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Filters/Filter_Single/Filter_Single_0.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="310.0,220.0,86.0,99.0">
+            <ValueBinding ord="slot:prefiltro">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Filters/Filter_Single/Filter_Single_4.png"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Filters/Filter_Single/Filter_Single_0.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="330.0,70.0,83.0,99.0">
+            <ValueBinding ord="slot:RAD_SO">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Dampers/Damper_Horz_Parallel/Damper_Horz_Parallel_3.png"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Dampers/Damper_Horz_Parallel/Damper_Horz_Parallel_0.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <BoundLabel layout="335.0,220.0,83.0,99.0">
+            <ValueBinding ord="slot:SAD_SO">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="module://kitPxGraphics/Dampers/Damper_Horz_Parallel/Damper_Horz_Parallel_3.png"/>
+                <Image name="falseValue" value="module://kitPxGraphics/Dampers/Damper_Horz_Parallel/Damper_Horz_Parallel_0.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </BoundLabel>
+
+          <Label layout="90.0,35.0,220.0,32.0">
+            <ValueBinding ord="slot:cambioModo">
+              <IEnumToSimple name="image" map="gx:Image 1=file:^images/botones/btn_sobrecomando-desocupado.png;0=file:^images/botones/btn_sobrecomando-ocupado.png;255=file:^images/botones/btn_horario.png;default=file:^images/botones/btn_sobrecomando-apagado.PNG;"/>
+            </ValueBinding>
+            <ActionBinding ord="slot:cambioModo/set"/>
+          </Label>
+
+          <BoundLabel layout="135.0,220.0,99.0,99.0">
+            <ValueBinding ord="slot:CLG_S">
+              <INumericToSimple name="image" map="gx:Image -inf:20.0=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_0.png;20.0:40.0=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_1.png;40.0:60.0=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_2.png;60.0:80.0=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_3.png;80.0:+inf=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_4.png;default=module://kitPxGraphics/Coils/Coils_Cooling/Coils_Cooling_0.png;"/>
+            </ValueBinding>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="350.0,325.0" background="#272c33">
+
+          <Label layout="105.0,20.0,140.0,20.0" text="Modo Afex" font="16.0pt Arial" foreground="white"/>
+
+          <Label layout="30.0,40.0,185.0,125.0">
+            <ValueBinding ord="slot:FAN_S">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="file:^images/botones/btn_chiller-encendido.png"/>
+                <Image name="falseValue" value="file:^images/botones/btn_chiller-apagado.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="55.0,150.0,65.0,85.0" image="file:^images/indicadores/indicador_temperatura-2.png"/>
+
+          <Label layout="45.0,230.0,240.0,85.0" image="file:^images/indicadores/indicador_humedad_noUnit.png"/>
+
+          <Label layout="125.0,170.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:AFEXSA_T">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="120.0,240.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:AFEXSA_H">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="120.0,215.0,145.0,20.0" text="Temperatura descarga afexs" font="10.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="225.0,90.0,110.0,20.0" text="V&#xe1;lvula" font="16.0pt Arial" foreground="white"/>
+
+          <Label layout="225.0,120.0,110.0,20.0" font="16.0pt Arial" foreground="white">
+            <ValueBinding ord="slot:CLG_S">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="350.0,325.0" background="#272c33">
+
+          <Label layout="50.0,55.0,70.0,85.0" image="file:^images/indicadores/indicador_temperatura-2.png"/>
+
+          <Label layout="115.0,20.0,145.0,20.0" text="Sensores descarga" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <GridPane layout="50.0,170.0,pref,pref"/>
+
+          <Label layout="130.0,65.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:SA_T">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="60.0,5.0,48.0,48.0" image="file:^images/iconos/ico_temperaturas.png"/>
+
+          <Label layout="50.0,135.0,240.0,85.0" image="file:^images/indicadores/indicador_humedad_noUnit.png"/>
+
+          <Label layout="135.0,140.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:SA_H">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="15.0,220.0,240.0,85.0" image="file:^images/indicadores/indicador_entalpia.PNG"/>
+
+          <Label layout="125.0,225.0,195.0,50.0" font="26.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:entalpiaSuministro">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref" forceNewRow="true">
+
+        <CanvasPane name="content" viewSize="350.0,325.0" background="#272c33">
+
+          <Label layout="60.0,60.0,70.0,85.0" image="file:^images/indicadores/indicador_temperatura-2.png"/>
+
+          <Label layout="135.0,25.0,145.0,20.0" text="Sensores entrada" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <GridPane layout="60.0,175.0,pref,pref"/>
+
+          <Label layout="140.0,70.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:RA_T">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="80.0,10.0,48.0,48.0" image="file:^images/iconos/ico_temperaturas.png"/>
+
+          <Label layout="60.0,140.0,240.0,85.0" image="file:^images/indicadores/indicador_humedad_noUnit.png"/>
+
+          <Label layout="145.0,145.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:RA_H">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="30.0,225.0,240.0,85.0" image="file:^images/indicadores/indicador_entalpia.PNG"/>
+
+          <Label layout="135.0,230.0,195.0,50.0" font="26.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:entalpiaRetorno">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="290.0,330.0" background="#272c33">
+
+          <Label layout="45.0,55.0,70.0,85.0" image="file:^images/indicadores/indicador_temperatura-2.png"/>
+
+          <Label layout="120.0,20.0,145.0,20.0" text="Sensores Rueda" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <GridPane layout="45.0,170.0,pref,pref"/>
+
+          <Label layout="125.0,65.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:MA_T">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="65.0,5.0,48.0,48.0" image="file:^images/iconos/ico_temperaturas.png"/>
+
+          <Label layout="45.0,135.0,240.0,85.0" image="file:^images/indicadores/indicador_humedad_noUnit.png"/>
+
+          <Label layout="130.0,140.0,140.0,50.0" font="34.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:MA_H">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="15.0,220.0,240.0,85.0" image="file:^images/indicadores/indicador_entalpia.PNG"/>
+
+          <Label layout="120.0,225.0,195.0,50.0" font="26.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:entalpiaRueda">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="33.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="290.0,330.0" background="#272c33">
+
+          <Label layout="110.0,30.0,100.0,20.0" text="Alarmas" font="16.0pt Arial" foreground="white"/>
+
+          <Ellipse geom="250.0,80.0,15.0,15.0">
+            <ValueBinding ord="slot:prefiltro">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Label layout="20.0,115.0,185.0,20.0" text="Alarma filtro" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="20.0,155.0,190.0,20.0" text="Fallo abanicos" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="20.0,195.0,190.0,20.0" text="Fallo damper suministro" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="20.0,235.0,145.0,20.0" text="Fallo damper retorno" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="20.0,80.0,185.0,20.0" text="Alarma prefiltro" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="70.0,15.0,48.0,48.0" image="file:^images/iconos/ico_alarms.png"/>
+
+          <Line stroke="#919191" geom="270.0,104.0 20.0,104.0"/>
+
+          <Line stroke="#919191" geom="270.0,145.0 20.0,145.0"/>
+
+          <Line stroke="#919191" geom="270.0,185.0 20.0,185.0"/>
+
+          <Line stroke="#919191" geom="265.0,225.0 15.0,225.0"/>
+
+          <Line stroke="#919191" geom="265.0,260.0 15.0,260.0"/>
+
+          <Ellipse geom="250.0,120.0,15.0,15.0">
+            <ValueBinding ord="slot:filtro">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="250.0,165.0,15.0,15.0">
+            <ValueBinding ord="slot:falloAbanico">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="250.0,205.0,15.0,15.0">
+            <ValueBinding ord="slot:falloDamperSuministro">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="250.0,240.0,15.0,15.0">
+            <ValueBinding ord="slot:falloDamperRetorno">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+    </FlowPane>
+
+  </ScrollPane>
+
+</EdgePane>
+</content>
+</px>

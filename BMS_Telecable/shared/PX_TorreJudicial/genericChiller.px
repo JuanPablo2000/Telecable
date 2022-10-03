@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="bajauxProgressBar"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="jxBrowser"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<EdgePane>
+
+  <ScrollPane name="center" viewportBackground="#323232">
+
+    <FlowPane name="content" align="fill" hgap="20" vgap="20" background="#373e47">
+
+      <ResponsivePane maxWidth="50.0%" minWidth="pref" forceNewRow="true">
+
+        <Line name="content" stroke="#494949" geom="0.0,0.0 1920.0,0.0"/>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref" forceNewRow="true">
+
+        <CanvasPane name="content" viewSize="325.0,325.0" background="#272c33">
+
+          <Label layout="0.0,15.0,100.0,20.0" font="underline 16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:">
+              <ValueToString name="text" format="%name%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="120.0,15.0,50.0,20.0" font="underline 16.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:UnitStatus">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="0.0,70.0,325.0,240.0" image="file:^images/equipos/chillers_daikin.png"/>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <Label layout="30.000000000000057,15.0,240.0,20.0" text="Modo de operaci&#xf3;n de la unidad" font="16.0pt Arial" foreground="white"/>
+
+          <BoundLabel layout="35.0,60.0,230.0,230.0">
+            <BoundLabelBinding ord="slot:UnitStatus" statusEffect="none">
+              <IEnumToSimple name="image" map="gx:Image 1=file:^images/botones/btn_estado-offline.png;4=file:^images/botones/btn_estado-paro.png;3=file:^images/botones/btn_estado-running-1.png;2=file:^images/botones/btn_estado-reparando.png;default=file:^images/botones/btn_estado-offline.png;"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="90,90,8"/>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <TabbedPane name="content">
+
+          <LabelPane>
+
+            <Label name="label" text="Compresor"/>
+
+            <CanvasPane name="content" visible="false" viewSize="300.0,325.0" background="#272c33">
+
+              <Label layout="70.0,20.0,38.0,38.0" image="file:^images/iconos/ico_bombas.png"/>
+
+              <Label layout="120.0,30.0,79.99999999999994,20.0" text="Compresor" font="16.0pt Arial" foreground="white" halign="left"/>
+
+              <BoundLabel layout="0.0,80.0,130.0,50.0" font="20.0pt Arial" foreground="white">
+                <BoundLabelBinding ord="slot:C1Comp1Hours">
+                  <ObjectToString name="text" format="%out.value%"/>
+                </BoundLabelBinding>
+                <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+              </BoundLabel>
+
+              <Label layout="110.0,94.0,215.0,25.0" text="Horas funcionamiento" font="bold 18.0pt Arial" foreground="white" halign="left"/>
+
+              <BoundLabel layout="0.0,120.0,130.0,50.0" font="20.0pt Arial" foreground="white">
+                <BoundLabelBinding ord="slot:C1Comp1Starts">
+                  <ObjectToString name="text" format="%out.value%"/>
+                </BoundLabelBinding>
+                <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+              </BoundLabel>
+
+              <Label layout="115.0,135.0,185.0,25.0" text="Inicios" font="bold 18.0pt Arial" foreground="white" halign="left"/>
+
+              <BoundLabel layout="0.0,160.0,130.0,50.0" font="20.0pt Arial" foreground="white">
+                <BoundLabelBinding ord="slot:C1Comp1Kilowatts">
+                  <ObjectToString name="text" format="%out.value% kW"/>
+                </BoundLabelBinding>
+                <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+              </BoundLabel>
+
+              <Label layout="115.0,175.0,185.0,25.0" text="Consumo" font="bold 18.0pt Arial" foreground="white" halign="left"/>
+
+            </CanvasPane>
+
+          </LabelPane>
+
+          <LabelPane>
+
+            <Label name="label" text="G. Consumo"/>
+
+          </LabelPane>
+
+        </TabbedPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <ImageButton layout="170.0,260.0,130.0,40.0" buttonStyle="none">
+            <ActionBinding ord="slot:/Drivers/NiagaraNetwork/SJOIJP05JAC01/points/AlarmasMantenimiento_OIJ/alarmaMantenimiento_Chiller02OIJ/set" degradeBehavior="disable" widgetEvent="actionPerformed"/>
+            <ValueBinding ord="slot:/Drivers/NiagaraNetwork/SJOIJP05JAC01/points/AlarmasMantenimiento_OIJ/alarmaMantenimiento_Chiller02OIJ">
+              <IBooleanToSimple name="image">
+                <Image name="trueValue" value="file:^images/botones/btn_alarma-out.png"/>
+                <Image name="falseValue" value="file:^images/botones/btn_alarma-in.png"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </ImageButton>
+
+          <Label layout="30.0,265.0,140.0,30.0" text="Mantenimiento alarmas" font="12.0pt Arial" foreground="silver"/>
+
+          <Label layout="30.0,5.0,38.0,38.0" image="file:^images/iconos/ico_refrigerante.png"/>
+
+          <Label layout="80.0,10.0,195.0,20.0" text="Temperatura Condensador" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <BoundLabel layout="60.0,70.0,225.0,63.0" image="file:^PX_TorreJudicial/iconos/chiller_in.png">
+            <BoundLabelBinding>
+              <ObjectToString name="text"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="75.0,140.0,190.0,50.0" image="file:^PX_TorreJudicial/iconos/chiller_out.png">
+            <BoundLabelBinding>
+              <ObjectToString name="text"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="95.0,80.0,160.0,50.0" font="24.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="slot:CondEntWTemp">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="90.0,145.0,160.0,50.0" font="24.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="slot:CondLeavWTemp">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref" forceNewRow="true">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <Label layout="20.0,20.0,38.0,38.0" image="file:^images/iconos/ico_refrigerante.png"/>
+
+          <Label layout="75.0,30.0,180.0,20.0" text="Temperatura Evaporador" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <BoundLabel layout="40.0,90.0,225.0,63.0" image="file:^PX_TorreJudicial/iconos/chiller_in.png">
+            <BoundLabelBinding>
+              <ObjectToString name="text"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="55.0,160.0,190.0,50.0" image="file:^PX_TorreJudicial/iconos/chiller_out.png">
+            <BoundLabelBinding>
+              <ObjectToString name="text"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="55.0,232.0,190.0,50.0" image="file:^PX_TorreJudicial/iconos/chiller_set.png">
+            <BoundLabelBinding>
+              <ObjectToString name="text"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="80.0,100.0,160.0,50.0" font="24.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="slot:EntEvapWaterTemp">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="75.0,160.0,160.0,50.0" font="24.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="slot:LvgEvapWaterTempUnit">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+          <BoundLabel layout="75.0,240.0,160.0,50.0" font="24.0pt Arial" foreground="white">
+            <BoundLabelBinding ord="slot:NetworkCoolTempSetpoint">
+              <ObjectToString name="text" format="%out.value%"/>
+            </BoundLabelBinding>
+            <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+          </BoundLabel>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <Label layout="40.0,20.0,38.0,38.0" image="file:^images/iconos/ico_refrigerante.png"/>
+
+          <Label layout="95.0,30.0,170.0,20.0" text="Carga compresor" font="16.0pt Arial" foreground="white" halign="left"/>
+
+          <WebWidget layout="40.0,70.0,230.0,230.0" js="view:bajauxProgressBar:ProgressBarGauge">
+            <Boolean name="enabled" f="3" value="true"/>
+            <WbViewBinding ord="slot:C1Cmp1VfdOutput"/>
+            <ProgressBarType name="gaugeType" f="3" value="Circle"/>
+            <String name="overrideOrd" f="rh3" value=""/>
+            <String name="valueText" f="3" value="%out.value%"/>
+            <Double name="min" f="3" value="0.0"/>
+            <Double name="max" f="3" value="100.0"/>
+            <Color name="fill" f="3" value="#fefefe"/>
+            <Color name="background" f="3" value="#272c33"/>
+            <Color name="trailColor" f="3" value="#5a5a5a"/>
+            <Color name="textColor" f="3" value="white"/>
+            <Font name="font" f="3" value="22.0pt Arial"/>
+            <Boolean name="showText" f="3" ft="trueText=s:Show$20Text|falseText=s:Hide$20Text" value="true"/>
+            <Double name="lineWidth" f="3" value="23.0"/>
+            <Color name="barColorStart" f="3" value="#ce513f"/>
+            <Color name="barColorEnd" f="3" value="#77bbf1"/>
+          </WebWidget>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <Label layout="100.0,10.0,38.0,48.0" image="file:^images/iconos/ico_alarms.png"/>
+
+          <Label layout="135.0,30.0,100.0,20.0" text="Alarmas" font="16.0pt Arial" foreground="white"/>
+
+          <Label layout="50.0,80.0,185.0,20.0" text="P&#xe9;rdida de comunicaci&#xf3;n" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="300.0,104.0 50.0,104.0"/>
+
+          <Ellipse geom="280.0,80.0,15.0,15.0">
+            <ValueBinding ord="slot:NetworkCoolTempSetpoint">
+              <IStatusToSimple name="fill">
+                <Brush name="disabled" value="grey"/>
+                <Brush name="fault" value="#c00000"/>
+                <Brush name="down" value="#c00000"/>
+                <Brush name="alarm" value="grey"/>
+                <Brush name="stale" value="grey"/>
+                <Brush name="overridden" value="grey"/>
+                <Brush name="nullStatus" value="grey"/>
+                <Brush name="unackedAlarm" value="grey"/>
+                <Brush name="ok" value="grey"/>
+              </IStatusToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Label layout="50.0,120.0,185.0,20.0" text="Alarma tipo fault" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Ellipse geom="280.0,120.0,15.0,15.0">
+            <ValueBinding ord="slot:AVFaultAlarm">
+              <INumericToSimple name="fill" map="gx:Brush 0.0:0.9=grey;0.9:100.0=#c00000;default=#c00000;"/>
+            </ValueBinding>
+          </Ellipse>
+
+          <Line stroke="#919191" geom="300.0,144.0 50.0,144.0"/>
+
+          <Label layout="50.0,160.0,185.0,20.0" text="Alarma tipo problema" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="300.0,184.0 50.0,184.0"/>
+
+          <Label layout="50.0,200.0,185.0,20.0" text="Alarma tipo warning" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="300.0,224.0 50.0,224.0"/>
+
+          <Label layout="50.0,235.0,190.0,20.0" text="Parada de emergencia" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Label layout="50.0,275.0,185.0,20.0" text="Falta de flujo de agua" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="300.0,260.0 50.0,260.0"/>
+
+          <Ellipse geom="280.0,235.0,15.0,15.0">
+            <ValueBinding ord="slot:EmergencyStopAlarm">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#f2504e"/>
+                <Brush name="falseValue" value="#919191"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="280.0,270.0,15.0,15.0">
+            <ValueBinding ord="slot:EvapWaterFlowStatus">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="grey"/>
+                <Brush name="falseValue" value="#c00000"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="280.0,160.0,15.0,15.0">
+            <ValueBinding ord="slot:AVProblemAlarm">
+              <INumericToSimple name="fill" map="gx:Brush 0.0:0.9=grey;0.9:100.0=#c00000;default=#c00000;"/>
+            </ValueBinding>
+          </Ellipse>
+
+          <Ellipse geom="280.0,200.0,15.0,15.0">
+            <ValueBinding ord="slot:AVWarningAlarmCode">
+              <INumericToSimple name="fill" map="gx:Brush 0.0:0.9=grey;0.9:100.0=#c00000;default=#c00000;"/>
+            </ValueBinding>
+          </Ellipse>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+      <ResponsivePane maxWidth="25.0%" minWidth="pref">
+
+        <CanvasPane name="content" viewSize="300.0,325.0" background="#272c33">
+
+          <Label layout="100.0,20.0,38.0,38.0" image="file:^images/iconos/ico_alarms.png"/>
+
+          <Label layout="135.0,30.0,100.0,20.0" text="Alarmas" font="16.0pt Arial" foreground="white"/>
+
+          <Label layout="25.0,120.0,95.0,20.0" text="Alarma fault:" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="275.0,144.0 25.0,144.0"/>
+
+          <Label layout="25.0,160.0,115.0,20.0" text="Alarma problem:" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="275.0,184.0 25.0,184.0"/>
+
+          <Label layout="25.0,200.0,115.0,20.0" text="Alarma warning:" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Line stroke="#919191" geom="275.0,224.0 25.0,224.0"/>
+
+          <Label layout="110.0,120.0,190.0,20.0" font="10.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:CodigosFaultAlarmas">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="130.0,160.0,190.0,20.0" font="10.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:CodigoProblem">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <Label layout="130.0,200.0,190.0,20.0" font="10.0pt Arial" foreground="white" halign="left">
+            <ValueBinding ord="slot:codigoWarnings">
+              <ValueToString name="text" format="%out.value%"/>
+            </ValueBinding>
+          </Label>
+
+          <ImageButton layout="70.0,250.0,160.0,70.0" buttonStyle="none" normal="file:^images/botones/btn-reset-ch2-unpress.png" pressed="file:^images/botones/btn-reset-ch2-press.png">
+            <ActionBinding ord="slot:ClearAlarm/set" widgetEvent="actionPerformed"/>
+          </ImageButton>
+
+          <Line stroke="#919191" geom="275.0,110.0 25.0,110.0"/>
+
+          <Label layout="25.0,80.0,155.0,20.0" text="Equipo en modo local" font="14.0pt Arial" foreground="white" halign="left"/>
+
+          <Ellipse geom="255.0,85.0,15.0,15.0">
+            <ValueBinding ord="slot:ChillerLocalRemote">
+              <IBooleanToSimple name="fill">
+                <Brush name="trueValue" value="#c00000"/>
+                <Brush name="falseValue" value="grey"/>
+              </IBooleanToSimple>
+            </ValueBinding>
+          </Ellipse>
+
+        </CanvasPane>
+
+      </ResponsivePane>
+
+    </FlowPane>
+
+  </ScrollPane>
+
+</EdgePane>
+</content>
+</px>

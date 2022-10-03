@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <FlowPane name="content" align="fill" background="#363f47">
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,20.0"/>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref" forceNewRow="true">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Picture layout="80.625,3.75,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_temperatura.png" scale="fitRatio"/>
+
+        <Picture enabled="false" layout="5.0,25.0,295.0,190.0" scale="fitRatio">
+          <ValueBinding ord="slot:Estado">
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^PX_TorreJudicial/iconos/vrf_01.png"/>
+              <Image name="falseValue" value="file:^PX_TorreJudicial/iconos/vrf_02.png"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </Picture>
+
+        <BoundLabel layout="110.0,10.0,100.0,20.0" font="bold 16.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:" statusEffect="none">
+            <ObjectToString name="text" format="%name%"/>
+          </BoundLabelBinding>
+        </BoundLabel>
+
+        <ImageButton layout="90.0,220.0,100.0,40.0" image="file:^PX_TorreJudicial/iconos/btn_cambiarhorario.png" buttonStyle="none">
+          <ActionBinding ord="slot:Estado/set" widgetEvent="actionPerformed"/>
+          <ValueBinding ord="slot:Estado">
+            <IBooleanToSimple name="background">
+              <Brush name="trueValue" value="#00c000"/>
+              <Brush name="falseValue" value="#ff4040"/>
+            </IBooleanToSimple>
+          </ValueBinding>
+        </ImageButton>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="75.0,9.0,157.0,20.0" text="Estado del Aire" font="bold 16.0pt SansSerif" foreground="white"/>
+
+        <BoundLabel layout="25.0,35.0,255.0,235.0">
+          <BoundLabelBinding ord="slot:Estado">
+            <ObjectToString name="text" format=""/>
+            <IBooleanToSimple name="image">
+              <Image name="trueValue" value="file:^images/iconos/state_on.png"/>
+              <Image name="falseValue" value="file:^images/iconos/state_off.png"/>
+            </IBooleanToSimple>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="110.125,15.75,100.0,20.0" text="SetPoint" font="bold 16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="80.0,10.0,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_setpoint.png" scale="fitRatio"/>
+
+        <Picture layout="55.0,85.0,200.0,75.0" image="file:^PX_TorreJudicial/iconos/indicador_temperatura_setpoint.png" scale="fitRatio"/>
+
+        <BoundLabel layout="85.0,85.0,160.0,50.0" font="bold 28.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:Temperatura_Setpoint">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <BoundLabel layout="85.0,165.0,160.0,50.0" font="bold 28.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:setpointFlujoAire">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+        <ImageButton layout="50.0,190.0,220.0,40.0" image="file:^PX_TorreJudicial/iconos/btn_setpoint-temp.png" buttonStyle="none">
+          <ActionBinding ord="slot:Temperatura_Setpoint/set" widgetEvent="actionPerformed"/>
+        </ImageButton>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="95.0,25.0,117.0,20.0" text="Sensores" font="bold 16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="60.0,20.0,30.0,30.0" image="file:^PX_TorreJudicial/iconos/ico_humedad.png" scale="fitRatio"/>
+
+        <Picture layout="55.0,95.0,175.0,95.0" image="file:^PX_TorreJudicial/iconos/indicador_temperatura_cuarto.png" scale="fitRatio"/>
+
+        <BoundLabel layout="80.0,100.0,145.0,50.0" font="bold 26.0pt SansSerif" foreground="white">
+          <BoundLabelBinding ord="slot:Temperatura_Cuarto">
+            <ObjectToString name="text" format="%out.value%"/>
+          </BoundLabelBinding>
+          <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+        </BoundLabel>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+    <ResponsivePane maxWidth="33.3%" minWidth="pref">
+
+      <CanvasPane name="content" viewSize="300.0,280.0" background="#272d32">
+
+        <Label layout="95.0,25.0,127.0,20.0" text="Alarmas" font="bold 16.0pt SansSerif" foreground="white"/>
+
+        <Picture layout="90.0,20.0,30.0,25.0" image="file:^PX_TorreJudicial/iconos/toolestado_alarmado.png" scale="fitRatio"/>
+
+        <Label layout="10.0,85.0,210.0,20.0" text="Filtro" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse geom="265.0,90.0,16.0,16.0">
+          <ValueBinding ord="slot:Alarma_Filtro">
+            <IEnumToSimple name="fill" map="gx:Brush 1=red;0=grey;default=grey;"/>
+          </ValueBinding>
+        </Ellipse>
+
+        <Line stroke="white" geom="290.0,110.0 10.0,110.0"/>
+
+        <Label layout="10.0,115.0,210.0,20.0" text="Alarma general" font="14.0pt SansSerif" foreground="white" halign="left"/>
+
+        <Ellipse geom="265.0,120.0,16.0,16.0">
+          <ValueBinding ord="slot:Alarma$20General">
+            <INumericToSimple name="fill" map="gx:Brush 0.0:1.0=grey;1.0:500.0=red;default=null;"/>
+          </ValueBinding>
+        </Ellipse>
+
+        <Line stroke="white" geom="290.0,140.0 10.0,140.0"/>
+
+      </CanvasPane>
+
+    </ResponsivePane>
+
+  </FlowPane>
+
+</ScrollPane>
+</content>
+</px>
